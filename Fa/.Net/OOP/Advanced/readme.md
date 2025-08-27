@@ -11,7 +11,6 @@
 
 
 - [21. واکنش‌گرایی و Dispatching](#21-واکنشگرایی-و-dispatching)
---  [21-1. واکنش‌گرایی و Dispatching](#21-واکنشگرایی-و-dispatching)
 - [22. بازتاب (Reflection)](#22-بازتاب-reflection)
 - [23. صیغه‌ها (Attributes)](#23-صیغهها-attributes)
 - [24. انواع ارجاعی قابل-null (Nullable Reference Types)](#24-انواع-ارجاعی-قابل-null-nullable-reference-types)
