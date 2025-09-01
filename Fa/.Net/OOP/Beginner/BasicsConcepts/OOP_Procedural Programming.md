@@ -5,12 +5,12 @@
 - [🟢 مفاهیم پایه](#-مفاهیم-پایه)
 - [🔹 Procedural Programming (رویه‌ای)](#-procedural-programming-رویه‌ای)
 - [🔹 Object-Oriented Programming (شیءگرا)](#-object-oriented-programming-شیءگرا)
-- [🔸 تفاوت کلیدی در منطق انتخاب (Selection)](#-تفاوت-کلیدی-در-منطق-انتخاب-selection)
+- [🔸 تفاوت کلیدی در منطق انتخاب selection](#-تفاوت-کلیدی-در-منطق-انتخاب-selection)
 - [🟠 شباهت‌ها](#-شباهتها)
 - [📊 جدول مقایسه کامل](#-جدول-مقایسه-کامل)
 - [📊 جدول مقایسه ساده](#-جدول-مقایسه-ساده)
-- [💻 کد نمونه Procedural در C#](#-کد-نمونه-procedural-در-c)
-- [💻 کد نمونه OOP در C#](#-کد-نمونه-oop-در-c)
+- [💻 کد نمونه Procedural در C#](#-procedural-programming-در-c)
+- [💻 کد نمونه OOP در C#](#-object-oriented-programming-در-c)
 
 
 ---
