@@ -15,7 +15,7 @@
 - [What is OOP?](./WhatـisـOOP.md)
 - [Principles of OOP](./01_Intro/README.md#principles-of-oop-encapsulation-inheritance-polymorphism-abstraction)
 - [OOP vs Procedural Programming](./OOP_ProceduralProgramming.md)
-- [Advantages of OOP in C#](./01_Intro/README.md#advantages-of-oop-in-c)
+- [Advantages of OOP in C#](./Advantages_of_OOP.md)
 
 
 
