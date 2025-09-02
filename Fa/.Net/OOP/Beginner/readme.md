@@ -40,7 +40,7 @@
 - Principles of OOP: Encapsulation, Inheritance, Polymorphism, Abstraction  
 - [OOP vs Procedural Programming ](./BasicsConcepts/OOP_ProceduralProgramming.md)
 - Advantages of OOP in C#  
-
+- [Advantages of OOP in C#](./BasicsConcepts/Advantages_of_OOP.md)
 ### 2. کلاس‌ها و اشیا (Classes & Objects)
 - Class Definition  
 - Object Instantiation  
