@@ -1,14 +1,15 @@
 ﻿
 ## 📘 فهرست مطالب: همه چیز درباره Object Initializer در C#
 
-1. 🧠 [Object Initializer یعنی چی؟](#object-initializer-یعنی-چی)
-2. ✅ [مثال ساده با Object Initializer](#مثال-ساده-با-object-initializer)
-3. 🔍 [چرا از Object Initializer استفاده کنیم؟](#چرا-از-object-initializer-استفاده-کنیم)
-4. 🧩 [مثال: آبجکت تو در تو (Nested Object)](#مثال-آبجکت-تو-در-تو-nested-object)
-5. 🆕 [ویژگی جدید: `init` (از C# 9.0 به بعد)](#ویژگی-جدید-init-از-c-90-به-بعد)
-6. 📚 [کاربرد در لیست‌ها (Collection Initializers)](#کاربرد-در-لیستها-collection-initializers)
-7. ⚠️ [نکات مهم](#نکات-مهم)
-8. 🏁 [جمع‌بندی](#جمعبندی)
+1. 🧠 [Object Initializer یعنی چی؟](#object-initializer)
+2. ✅ [مثال ساده با Object Initializer](#simple-example)
+3. 🔍 [چرا از Object Initializer استفاده کنیم؟](#why-use-object-initializer)
+4. 🧩 [مثال: آبجکت تو در تو (Nested Object)](#nested-object-example)
+5. 🆕 [ویژگی جدید: init (از C# 9.0 به بعد)](#init-property)
+6. 📚 [کاربرد در لیست‌ها (Collection Initializers)](#collection-initializers)
+7. ⚠️ [نکات مهم](#important-notes)
+8. 🏁 [جمع‌بندی](#summary)
+
 
 
 ### 🧠 **Object Initializer یعنی چی؟**
