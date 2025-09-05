@@ -105,7 +105,8 @@ student.Age = 23; // ❌ Error! Age فقط با init قابل تنظیم است!
 > 🔒 این ویژگی عالیه برای ساخت **داده‌های امن و تغییرناپذیر** (مثل DTOها، Recordها و ...)
 
 ---
-
+# collection-initializers
+---
 ### 📚 **کاربرد در لیست‌ها (Collection Initializers)**
 
 می‌تونی از Object Initializer توی لیست‌ها هم استفاده کنی:
@@ -122,7 +123,8 @@ var students = new List<Student>
 > 🎉 کد خوندنی، تمیز، و حرفه‌ای!
 
 ---
-
+# important-notes
+---
 ### ⚠️ **نکات مهم**
 
 | نکته | توضیح |
@@ -133,7 +135,8 @@ var students = new List<Student>
 | 🔹 مناسب برای **کلاس، struct، record** | همه اشکال شیءسازی رو پشتیبانی می‌کنه |
 
 ---
-
+# summary
+---
 ### 🏁 جمع‌بندی
 
 > 🧩 **Object Initializer = ساخت + مقداردهی در یه دستور**
