@@ -16,7 +16,7 @@
   - [چه اتفاقی در پسپرده میافتد](#-چه-اتفاقی-در-پسپرده-میافتد)
   - [ویژگیهای پیشرفته new operator](#%EF%B8%8F-ویژگیهای-پیشرفته-new-operator)
 
-- [بخش ۳ new به عنوان constraint -- در generic](#-بخش-۳-new-به-عنوان-constraint----در-generic)
+- [بخش ۳ new به عنوان constraint -- در generic](#-بخش-۳-new-به-عنوان-constraint--در-generic)
   - [مفهوم](#-مفهوم)
   - [محدودیتها](#-محدودیتها)
   - [ترکیب با سایر constraintها](#-ترکیب-با-سایر-constraintها)
