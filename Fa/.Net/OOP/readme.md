@@ -19,7 +19,7 @@
 
 ### 1. مقدمه و مفاهیم پایه
 - [What is OOP?](./Beginner/BasicsConcepts/WhatـisـOOP.md)  
-- Principles of OOP: Encapsulation, Inheritance, Polymorphism, Abstraction  
+- [Principles of OOP](./Beginner/BasicsConcepts/OOP-Principles.md)  
 - [OOP vs Procedural Programming ](./Beginner/BasicsConcepts/OOP_ProceduralProgramming.md)
 - [Advantages of OOP in C#](./Beginner/BasicsConcepts/Advantages_of_OOP.md)
 ### 2. کلاس‌ها و اشیا (Classes & Objects)
