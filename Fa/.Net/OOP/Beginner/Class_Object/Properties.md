@@ -9,7 +9,7 @@
 - [5. Init-only Properties](#5-init-only-properties-پیشرفته---c-90)
 - [6. Expression-bodied Properties](#6-expression-bodied-properties-متوسط)
 - [7. Computed Properties](#-computed-properties-مفهومی)
-- [8. Backing Fields](#نکات-پیشرفته)
+- [8. Backing Fields](#جمعبندی-و-نکات-حرفهای)
 - [جمع‌بندی و نکات حرفه‌ای](#جمع‌بندی-و-نکات-حرفه‌ای)
 
 ---
