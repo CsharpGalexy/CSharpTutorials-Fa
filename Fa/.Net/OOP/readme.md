@@ -29,10 +29,7 @@
 - [ Object Initializers ](./Beginner/Class_Object/ObjectـInitializers.md)  
 - [  `new` Modifier  ](./Beginner/Class_Object/new_Keyword_Modifier.md)  
  
-- Object Instantiation  
-- `this` Keyword  
-- Object Initializers  
-- `new` Modifier  
+
 
 ### 3. فیلدها و ویژگی‌ها (Fields & Properties)
 - Fields (Instance, Static)  
