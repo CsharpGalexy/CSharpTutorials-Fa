@@ -23,7 +23,12 @@
 - [OOP vs Procedural Programming ](./Beginner/BasicsConcepts/OOP_ProceduralProgramming.md)
 - [Advantages of OOP in C#](./Beginner/BasicsConcepts/Advantages_of_OOP.md)
 ### 2. کلاس‌ها و اشیا (Classes & Objects)
-- Class Definition  
+- [Class Definition ](./Beginner/Class_Object/Definition_Class.md)  
+- [ Object Instantiation ](./Beginner/Class_Object/Object_Instantiation .md)  
+- [`this` Keyword  ](./Beginner/Class_Object/this_Keyword.md)  
+- [ Object Initializers](./Beginner/Class_Object/ObjectـInitializers.md)  
+- [  `new` Modifier  ](./Beginner/Class_Object/new_Keyword_Modifier.md)  
+ 
 - Object Instantiation  
 - `this` Keyword  
 - Object Initializers  
