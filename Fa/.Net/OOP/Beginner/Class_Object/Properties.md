@@ -2,7 +2,7 @@
 # ویژگی‌ها (Properties) در C#
 
 ## فهرست مطالب
-- [1. Auto-Implemented Properties](#1-auto-implemented-properties-پایه‌ای)
+- [1. Auto-Implemented Properties](#-1-auto-implemented-properties-پایه‌ای)
 - [2. Full Properties (با get/set سفارشی)](#2-full-properties-با-getset-سفارشی-پایه‌ای)
 - [3. Read-only Properties](#3-read-only-properties-پایه‌ای-تا-متوسط)
 - [4. Write-only Properties](#4-write-only-properties-کم‌کاربرد)
