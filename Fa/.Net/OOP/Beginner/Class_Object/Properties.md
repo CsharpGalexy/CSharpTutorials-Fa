@@ -2,13 +2,13 @@
 # ویژگی‌ها (Properties) در C#
 
 ## فهرست مطالب
-- [1. Auto-Implemented Properties](#-1-auto-implemented-properties-پایه‌ای)
-- [2. Full Properties (با get/set سفارشی)](#2-full-properties-با-getset-سفارشی-پایه‌ای)
-- [3. Read-only Properties](#3-read-only-properties-پایه‌ای-تا-متوسط)
-- [4. Write-only Properties](#4-write-only-properties-کم‌کاربرد)
+- [1. Auto-Implemented Properties](#1-auto-implemented-properties-پایهای)
+- [2. Full Properties (با get/set سفارشی)](#2-full-properties-با-getset-سفارشی-پایهای)
+- [3. Read-only Properties](#3-read-only-properties-پایهای-تا-متوسط)
+- [4. Write-only Properties](#4-write-only-properties-کمکاربرد)
 - [5. Init-only Properties](#5-init-only-properties-پیشرفته---c-90)
 - [6. Expression-bodied Properties](#6-expression-bodied-properties-متوسط)
-- [7. Computed Properties](#7-computed-properties-مفهومی)
+- [7. Computed Properties](#-computed-properties-مفهومی)
 - [8. Backing Fields](#8-backing-fields-مکانیسم-پایه)
 - [جمع‌بندی و نکات حرفه‌ای](#جمع‌بندی-و-نکات-حرفه‌ای)
 
