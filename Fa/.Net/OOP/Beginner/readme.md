@@ -41,15 +41,15 @@
 - [OOP vs Procedural Programming ](./BasicsConcepts/OOP_ProceduralProgramming.md)
 - [Advantages of OOP in C#](./BasicsConcepts/Advantages_of_OOP.md)
 ### 2. کلاس‌ها و اشیا (Classes & Objects)
-- Class Definition  
-- Object Instantiation  
-- `this` Keyword  
-- Object Initializers  
-- `new` Modifier  
+- [Class Definition ](./Class_Object/Definition_Class.md)  
+- [ Object Instantiation ](./Class_Object/Object_Instantiation.md)  
+- [`this` Keyword  ](./Class_Object/this_Keyword.md)  
+- [ Object Initializers ](./Class_Object/ObjectـInitializers.md)  
+- [  `new` Modifier  ](./Class_Object/new_Keyword_Modifier.md)  
 
 ### 3. فیلدها و ویژگی‌ها (Fields & Properties)
 - Fields (Instance, Static)  
-- Properties: Auto-Implemented, Full (get/set), Read-only/Write-only, Init-only, Expression-bodied, Computed, Backing Fields  
+- [ Properties: Auto-Implemented, Full (get/set), Read-only/Write-only, Init-only, Expression-bodied, Computed, Backing Fields   ](./Beginner/Class_Object/Properties.md)  
 
 ### 4. سازنده‌ها و تخریب‌کننده‌ها (Constructors & Destructors)
 - Default, Parameterized, Overloading  
