@@ -49,7 +49,7 @@
 
 ### 3. فیلدها و ویژگی‌ها (Fields & Properties)
 - Fields (Instance, Static)  
-- [ Properties: Auto-Implemented, Full (get/set), Read-only/Write-only, Init-only, Expression-bodied, Computed, Backing Fields   ](./Beginner/Class_Object/Properties.md)  
+- [ Properties: Auto-Implemented, Full (get/set), Read-only/Write-only, Init-only, Expression-bodied, Computed, Backing Fields   ](./Class_Object/Properties.md)  
 
 ### 4. سازنده‌ها و تخریب‌کننده‌ها (Constructors & Destructors)
 - Default, Parameterized, Overloading  
