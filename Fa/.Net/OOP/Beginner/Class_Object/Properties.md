@@ -10,7 +10,7 @@
 - [6. Expression-bodied Properties](#6-expression-bodied-properties-متوسط)
 - [7. Computed Properties](#-computed-properties-مفهومی)
 - [8. Backing Fields](#8-backing-fields-مکانیسم-پایه)
-- [جمع‌بندی و نکات حرفه‌ای](#جمع‌بندی-و-نکات-حرفه‌ای)
+- [جمع‌بندی و نکات حرفه‌ای](#جمعبندی-و-نکات-حرفهای)
 
 ---
 
