@@ -33,12 +33,6 @@
 
 
 
-- ✅ **Default Constructor**  
-- ✅ **Parameterized Constructor**  
-- ✅ **Constructor Overloading**
-
-
-
 ---
 
 ## 🔹 ۱. Default Constructor (سازنده پیش‌فرض)
