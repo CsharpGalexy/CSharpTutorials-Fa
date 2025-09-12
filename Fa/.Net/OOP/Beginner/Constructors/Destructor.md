@@ -246,7 +246,7 @@ class Program
 | ✅ از `IDisposable` و `using` استفاده کنید | تمیزکاری فوری و قابل پیش‌بینی. |
 | ✅ از `GC.SuppressFinalize(this)` استفاده کنید | پس از `Dispose`، جلوگیری از اجرای اضافی Destructor. |
 | ❌ از فراخوانی `GC.Collect()` خودداری کنید | غیرضروری و ممکن است عملکرد را کاهش دهد. |
-| ✅ Destructor را protected و virtual تعریف کنید | برای کلاس‌های پایه، اجازه override در فرزندان. |
+| ✅ متد Dispose(bool) را protected virtual تعریف کنید | برای کلاس‌های پایه، اجازه override در فرزندان جهت پاک‌سازی منابع. |
 | ❌ از دسترسی به اشیاء دیگر در Destructor خودداری کنید | ممکن است قبلاً توسط GC تخریب شده باشند. |
 
 ---
