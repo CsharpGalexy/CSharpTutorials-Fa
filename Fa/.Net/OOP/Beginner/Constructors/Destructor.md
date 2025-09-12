@@ -24,7 +24,7 @@
 
 # 🧨 Destructor در C# — از مقدماتی تا پیشرفته
 
-> 🔹 نویسنده: [Your Name]  
+> 🔹 نویسنده: [abolfazl shabani]  
 > 📚 منبع اصلی: Microsoft Docs, C# Language Specification, Pro C# by Andrew Troelsen  
 > 🗂️ بخش: OOP in C#
 
