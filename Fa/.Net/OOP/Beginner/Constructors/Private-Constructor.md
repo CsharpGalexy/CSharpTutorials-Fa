@@ -5,15 +5,15 @@
 3. [چرا از Private Constructor استفاده کنیم؟](#3-چرا-از-private-constructor-استفاده-کنیم)  
 4. [تفاوت با Public Constructor](#4-تفاوت-با-public-constructor)  
 5. [الگوهای طراحی (Design Patterns)](#5-الگوهای-طراحی-design-patterns)  
-6. [استفاده در Utility / Helper Classes](#6-استفاده-در-utility--helper-classes)  
-7. [کلاس‌های Static vs کلاس با Private Constructor](#7-کلاس‌های-static-vs-کلاس-با-private-constructor)  
+6. [استفاده در Utility / Helper Classes](#6-utility--helper-classes)  
+7. [کلاس‌های Static vs کلاس با Private Constructor](#7-کلاسهای-static-vs-کلاس-با-private-constructor)  
 8. [Generic و Private Constructor](#8-generic-و-private-constructor)  
 9. [Reflection و دسترسی به Private Constructor](#9-reflection-و-دسترسی-به-private-constructor)  
-10. [محدودیت‌ها و اشتباهات رایج](#10-محدودیت‌ها-و-اشتباهات-رایج)  
+10. [محدودیت‌ها و اشتباهات رایج](#10-محدودیتها-و-اشتباهات-رایج)  
 11. [سناریوهای پیشرفته](#11-سناریوهای-پیشرفته)  
-12. [جمع‌بندی](#12-جمع‌بندی)  
-13. [منابع](#13-منابع)  
-14. [Private Constructor در Record و سریالایز کردن](#14-private-constructor-در-record-و-سریالایز-کردن) ← **اضافه شده**
+12. [جمع‌بندی](#13-جمعبندی)  
+13. [منابع](#14-منابع)  
+14. [Private Constructor در Record و سریالایز کردن](#12-private-constructor-در-record-و-سریالایز-کردن) ← **اضافه شده**
 
 ---
 
