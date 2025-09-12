@@ -11,9 +11,9 @@
 9. [Reflection و دسترسی به Private Constructor](#9-reflection-و-دسترسی-به-private-constructor)  
 10. [محدودیت‌ها و اشتباهات رایج](#10-محدودیتها-و-اشتباهات-رایج)  
 11. [سناریوهای پیشرفته](#11-سناریوهای-پیشرفته)  
+12. [Private Constructor در Record و سریالایز کردن](#12-private-constructor-در-record-و-سریالایز-کردن) ← **اضافه شده**
 12. [جمع‌بندی](#13-جمعبندی)  
 13. [منابع](#14-منابع)  
-14. [Private Constructor در Record و سریالایز کردن](#12-private-constructor-در-record-و-سریالایز-کردن) ← **اضافه شده**
 
 ---
 
