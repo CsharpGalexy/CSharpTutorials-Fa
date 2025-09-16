@@ -9,9 +9,9 @@
 2. [تعریف Information Hiding](#-تعریف-information-hiding)  
 3. [چرا Information Hiding مهم است؟](#-چرا-information-hiding-مهم-است)  
 4. [اصول بنیادی در C#](#-اصول-بنیادی-information-hiding-در-c)  
-   - دسترسی‌های کنترل‌شده با Access Modifiers  
-   - پنهان‌سازی داده‌ها (Data Hiding)  
-   - پنهان‌سازی پیاده‌سازی (Implementation Hiding)  
+   -[ دسترسی‌های کنترل‌شده با Access Modifiers  ](#۱-دسترسیهای-کنترلشده-با-access-modifiers)
+   -[ پنهان‌سازی داده‌ها (Data Hiding) ](#۲-پنهانسازی-دادهها-data-hiding)
+   -[ پنهان‌سازی پیاده‌سازی (Implementation Hiding)](#۳-پنهانسازی-پیادهسازی-implementation-hiding)
 5. [راهکارهای عملی در C#](#-راهکارهای-عملی-در-c)  
 6. [مثال کامل: BankAccount](#-مثال-کامل-bankaccount)  
 7. [بهترین روش‌ها (Best Practices)](#-بهترین-روشها-best-practices)  
