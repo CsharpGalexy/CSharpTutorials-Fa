@@ -41,7 +41,8 @@
 - Static Constructor  
 - Private Constructor  
 - Destructor (`~ClassName`)  
-- Finalizers & Garbage Collection  
+- [ Finalizers & Garbage Collection  ](./Beginner/Constructors/Finalizers_Garbage_Collection.md)  
+
 
 ### 5. مدیریت دسترسی (Access Modifiers)
 - public, private, protected, internal, protected internal, private protected  
