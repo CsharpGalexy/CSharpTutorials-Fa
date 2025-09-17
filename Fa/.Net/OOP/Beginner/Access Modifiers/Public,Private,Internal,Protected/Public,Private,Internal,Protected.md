@@ -90,3 +90,38 @@ class Program
 📌 نکته: اگر برای یک عضو دسترسی مشخص نکنید، پیش‌فرض `private` خواهد بود.
 
 ---
+
+## 🔹 protected
+
+با `protected`، عضو در کلاس خودش و همچنین در کلاس‌های مشتق‌شده (چه در همان اسمبلی و چه در اسمبلی دیگر) قابل دسترسی است.
+
+### مثال
+```csharp
+public class Car
+{
+    protected string Model = "Mustang";
+}
+
+public class SportsCar : Car
+{
+    public void ShowModel()
+    {
+        Console.WriteLine(Model); // مجاز
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        SportsCar myCar = new SportsCar();
+        myCar.ShowModel(); // خروجی: Mustang
+    }
+}
+```
+
+---
+
+## 🔹 internal
+
+سطح دسترسی `internal` دسترسی را به کدهای داخل همان اسمبلی محدود می‌کند. اسمبلی می‌تواند یک فایل `.dll` یا `.exe` باشد.
