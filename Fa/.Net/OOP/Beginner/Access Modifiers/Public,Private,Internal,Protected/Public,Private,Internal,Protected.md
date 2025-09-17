@@ -146,3 +146,37 @@ class Program
 📌 نکته: برای کلاس‌های سطح بالا اگر دسترسی مشخص نکنید، پیش‌فرض `internal` است.
 
 ---
+
+## 🔹 protected internal
+
+این ترکیب معادل **(protected OR internal)** است:
+
+- داخل همان اسمبلی: همه می‌توانند دسترسی داشته باشند.  
+- خارج از اسمبلی: فقط کلاس‌های مشتق‌شده می‌توانند دسترسی داشته باشند.
+
+### مثال
+```csharp
+public class Car
+{
+    protected internal string Model = "Mustang";
+}
+
+class AnotherClass
+{
+    public void AccessModel()
+    {
+        Car car = new Car();
+        Console.WriteLine(car.Model); // مجاز چون در همان اسمبلی هستیم
+    }
+}
+
+public class SportsCar : Car
+{
+    public void ShowModel()
+    {
+        Console.WriteLine(Model); // مجاز حتی اگر در اسمبلی دیگر باشد
+    }
+}
+```
+
+---
