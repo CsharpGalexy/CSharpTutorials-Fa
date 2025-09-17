@@ -180,3 +180,36 @@ public class SportsCar : Car
 ```
 
 ---
+
+## 🔹 private protected
+
+این سطح دسترسی از C# 7.2 معرفی شد و معادل **(private AND protected)** است:
+
+فقط در همان کلاس یا کلاس‌های مشتق‌شده و فقط در همان اسمبلی قابل دسترسی است.
+
+### مثال
+```csharp
+public class Car
+{
+    private protected string Model = "Mustang";
+}
+
+public class SportsCar : Car
+{
+    public void ShowModel()
+    {
+        Console.WriteLine(Model); // مجاز چون مشتق‌شده و در همان اسمبلی است
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        SportsCar myCar = new SportsCar();
+        myCar.ShowModel(); // خروجی: Mustang
+    }
+}
+```
+
+---
