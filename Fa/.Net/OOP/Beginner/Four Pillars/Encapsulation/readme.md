@@ -57,3 +57,40 @@ private int InternalAdd(int x, int y)
 ➡️ **طبق [راهنمای طراحی .NET مایکروسافت](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/)، همیشه جزئیات پیاده‌سازی را مخفی کنید و فقط قرارداد لازم را عمومی کنید.**
 
 ---
+## نمونه کد کامل در C# (Calculator) با توضیح گام‌به‌گام
+بیایید یک مثال واقعی بسازیم:
+
+```csharp
+// 1. اینترفیس عمومی – قرارداد
+public interface ICalculator
+{
+    int Add(int a, int b);
+    int Subtract(int a, int b);
+}
+
+// 2. کلاس پیاده‌سازی
+public class Calculator : ICalculator
+{
+    // متدهای عمومی – تنها درگاه کاربران
+    public int Add(int a, int b)
+    {
+        LogOperation("Add", a, b);
+        return InternalAdd(a, b);
+    }
+
+    public int Subtract(int a, int b)
+    {
+        LogOperation("Subtract", a, b);
+        return InternalSubtract(a, b);
+    }
+
+    // پیاده‌سازی خصوصی
+    private int InternalAdd(int x, int y) => x + y;
+    private int InternalSubtract(int x, int y) => x - y;
+
+    private void LogOperation(string operation, int a, int b)
+    {
+        Console.WriteLine($"Operation: {operation} | Args: {a}, {b}");
+    }
+}
+```
