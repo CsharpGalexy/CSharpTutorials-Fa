@@ -159,3 +159,12 @@ public abstract class BaseCalculator
 انتخاب درست، کدی امن‌تر، خواناتر و قابل توسعه‌تر می‌سازد.  
 
 ---
+
+## منابع و رفرنس‌های معتبر
+- [Access Modifiers (C# Programming Guide) – Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)  
+- [Encapsulation in Object-Oriented Programming – Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)  
+- [Default Interface Methods – C# 8.0 – Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#default-interface-methods)  
+- [Framework Design Guidelines – Microsoft Docs](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/)  
+- _Clean Code: A Handbook of Agile Software Craftsmanship – Robert C. Martin_  
+- _Design Patterns: Elements of Reusable Object-Oriented Software – Erich Gamma et al._  
+- [Encapsulation – Martin Fowler](https://martinfowler.com/bliki/Encapsulation.html)  
