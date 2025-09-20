@@ -64,7 +64,7 @@ class Program
 {
     static void Main()
     {
-        Animal myPet = new Dog(); // متغیر از نوع Animal، اما اشاره‌گر به Dog
+        Animal myPet = new Dog(); // متغیر از نوع Animal، اما ارجاع به شیء Dog
         myPet.MakeSound(); // خروجی: "Woof!" — تصمیم در زمان اجرا گرفته شد!
     }
 }
