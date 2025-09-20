@@ -59,8 +59,8 @@
 - Finalizers & Garbage Collection  
 
 ### 5. مدیریت دسترسی (Access Modifiers)
-- public, private, protected, internal, protected internal, private protected  
-- Assembly & Namespace Scope  
+- [public, private, protected, internal, protected internal, private protected ](./Access_Modifiers/Public_Private_Internal_Protected.md)
+ - Assembly & Namespace Scope  
 - Best Practices  
 
 ### 6. انکپسولاسیون (Encapsulation)
