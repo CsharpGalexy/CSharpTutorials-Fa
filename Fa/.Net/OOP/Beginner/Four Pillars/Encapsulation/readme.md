@@ -102,3 +102,37 @@ public class Calculator : ICalculator
 - **گام ۵:** متد `LogOperation` صرفاً یک جزئیات داخلی است. تغییر آن تاثیری روی مصرف‌کننده ندارد.  
 
 ---
+## نکات پیشرفته: Internal، Default Interface Methods و Protected
+
+### ۱. internal
+برای محدود کردن دسترسی به سطح اسمبلی:
+```csharp
+internal class InternalHelper { /* ... */ }
+```
+
+### ۲. Default Interface Methods (C# 8+)
+```csharp
+public interface ILogger
+{
+    void Log(string message);
+
+    void LogError(string message) => Log($"[ERROR] {message}");
+
+    private void Validate(string message)
+    {
+        if (string.IsNullOrEmpty(message))
+            throw new ArgumentException("Message cannot be null or empty.");
+    }
+}
+```
+
+### ۳. protected
+در کلاس پایه برای ارث‌بری کنترل‌شده:
+```csharp
+public abstract class BaseCalculator
+{
+    public int Add(int a, int b) => PerformAdd(a, b);
+
+    protected abstract int PerformAdd(int a, int b);
+}
+```
