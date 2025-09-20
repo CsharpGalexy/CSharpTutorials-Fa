@@ -65,7 +65,7 @@
 
 ### 6. انکپسولاسیون (Encapsulation)
 - Information Hiding  
-- Public Interface vs Private Implementation  
+- [Public Interface vs Private Implementation](./Public_Interface_vs_Private_Implementation.md)
 - Property Validation  
 
 
