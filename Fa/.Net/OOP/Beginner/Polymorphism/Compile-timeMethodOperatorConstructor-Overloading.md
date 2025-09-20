@@ -4,12 +4,12 @@
 
 1. [مقدمه: Overloading چیست؟](#1-مقدمه-overloading-چیست)  
 2. [Method Overloading (بارگذاری متدها)](#2-method-overloading-بارگذاری-متدها)  
-3. [Constructor Overloading (بارگذاری سازنده‌ها)](#3-constructor-overloading-بارگذاری-سازندهها)  
+3. [Constructor Overloading (بارگذاری سازنده‌ها)](#3-constructor-overloading-بارگذاری-سازنده%E2%80%8Cها)  
 4. [Operator Overloading (بارگذاری عملگرها)](#4-operator-overloading-بارگذاری-عملگرها)  
-5. [قوانین و محدودیت‌های Overloading](#5-قوانین-و-محدودیتهای-overloading)  
+5. [قوانین و محدودیت‌های Overloading](#5-قوانین-و-محدودیت%E2%80%8Cهای-overloading)  
 6. [تفاوت Overloading با Overriding](#6-تفاوت-overloading-با-overriding)  
-7. [بهترین روش‌ها و نکات طلایی](#7-بهترین-روشها-و-نکات-طلایی)  
-8. [جمع‌بندی](#8-جمعبندی)  
+7. [بهترین روش‌ها و نکات طلایی](#7-بهترین-روش%E2%80%8Cها-و-نکات-طلایی)  
+8. [جمع‌بندی](#8-جمع%E2%80%8Cبندی)  
 9. [منابع معتبر](#9-منابع-معتبر)
 
 ---
