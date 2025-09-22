@@ -2,12 +2,12 @@
 
 ## 📖 فهرست مطالب
 
-1. [مقدمه: چرا چند ریختی مهم است؟](#مقدمه-چرا-چند-ریختی-مهم-است)
-2. [چند ریختی زیرنوع (Subtype Polymorphism)](#چند-ریختی-زیرنوع-subtype-polymorphism)
-3. [چند ریختی پارامتریک (Parametric Polymorphism / Generics)](#چند-ریختی-پارامتریک-parametric-polymorphism--generics)
-4. [چند ریختی به صورت Ad-hoc (Method Overloading و Operator Overloading)](#چند-ریختی-به-صورت-ad-hoc-method-overloading-و-operator-overloading)
-5. [جمع‌بندی و مقایسه انواع چند ریختی](#جمع‌بندی-و-مقایسه-انواع-چند-ریختی)
-6. [منابع معتبر](#منابع-معتبر)
+1. [مقدمه: چرا چند ریختی مهم است؟](#1-مقدمه-چرا-چند-ریختی-مهم-است)
+2. [چند ریختی زیرنوع (Subtype Polymorphism)](#2-چند-ریختی-زیرنوع-subtype-polymorphism)
+3. [چند ریختی پارامتریک (Parametric Polymorphism / Generics)](#3-چند-ریختی-پارامتریک-parametric-polymorphism--generics)
+4. [چند ریختی به صورت Ad-hoc (Method Overloading و Operator Overloading)](#4-چند-ریختی-به-صورت-ad-hoc-method-overloading-و-operator-overloading)
+5. [جمع‌بندی و مقایسه انواع چند ریختی](#5-جمع‌بندی-و-مقایسه-انواع-چند-ریختی)
+6. [منابع معتبر](#6-منابع-معتبر)
 
 ---
 
