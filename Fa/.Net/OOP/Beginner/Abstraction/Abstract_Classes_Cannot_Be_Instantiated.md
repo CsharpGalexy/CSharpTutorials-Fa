@@ -235,7 +235,7 @@ var obj = FormatterServices.GetUninitializedObject(typeof(Animal));
 
 ---
 
-## 7. خطاهای کامپایلر — کدهای CS0144 و CS0179
+## 7. خطاهای کامپایلر — کدهای CS0144 و CS0534
 
 ### ❌ CS0144: Cannot create an instance of the abstract class or interface
 
