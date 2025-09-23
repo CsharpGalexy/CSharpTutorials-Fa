@@ -251,14 +251,14 @@ Animal a = new Dog(); // ✅ صحیح
 
 ---
 
-### ❌ CS0179: Cannot call abstract method
+### ❌ CS0534: Does not implement inherited abstract member
 
 این خطا زمانی می‌آید که **در کلاس فرزند، متد انتزاعی را بدون `override` پیاده‌سازی کنید**:
 
 ```csharp
 public class Dog : Animal
 {
-    public void MakeSound() { } // ❌ CS0179 — باید override باشد
+    public void MakeSound() { } // ❌ CS0534 — متد پایه override نشده است.
 }
 ```
 
