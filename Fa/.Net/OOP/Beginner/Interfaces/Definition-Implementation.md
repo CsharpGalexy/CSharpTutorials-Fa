@@ -86,7 +86,11 @@ public class MyClass : IMyInterface
         Console.WriteLine("Explicit implementation");
     }
 
-    string IMyInterface.Name { get; set; }
+    private string _name;
+    string IMyInterface.Name { get => _name; set => _name = value; }
+
+    // تمام اعضای اینترفیس باید پیاده‌سازی شوند
+    public event EventHandler SomethingHappened;
 }
 ```
 
