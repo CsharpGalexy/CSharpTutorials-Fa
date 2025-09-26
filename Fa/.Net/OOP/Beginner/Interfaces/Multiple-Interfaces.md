@@ -104,7 +104,7 @@ public class Graphic : IShape, IImage
 ## قوانین و محدودیت‌ها
 
 - یک کلاس می‌تواند **هر تعداد Interface** را پیاده‌سازی کند.
-- Interfaceها **نمی‌توانند** شامل فیلدها (Fields) باشند (مگر ثابت‌ها در C# 8+).
+- Interfaceها **نمی‌توانند** شامل فیلدهای نمونه (Instance Fields) باشند، اما از C# 8.0 به بعد می‌توانند اعضای `static` (شامل فیلدها) را تعریف کنند.
 - از C# 8.0 به بعد، Interfaceها می‌توانند **متد پیش‌فرض (Default Implementation)** داشته باشند.
 - Interfaceها **قابل ارث‌بری** هستند (یک Interface می‌تواند از Interface دیگر ارث‌بری کند).
 
