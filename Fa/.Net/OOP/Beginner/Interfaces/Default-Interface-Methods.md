@@ -157,13 +157,14 @@ class C : IA, IB
 ### مثال ۱: افزودن متد جدید به رابط قدیمی
 
 ```csharp
-// رابط قدیمی
-public interface ILogger
-{
-    void Log(string message);
-}
+// فرض کنید رابط ILogger در نسخه قبلی کتابخانه به این صورت بوده است:
+// public interface ILogger
+// {
+//     void Log(string message);
+// }
 
-// در C# 8.0+ می‌توانیم اضافه کنیم بدون شکستن کد
+// در C# 8.0+، می‌توانیم متد جدیدی با پیاده‌سازی پیش‌فرض اضافه کنیم
+// بدون اینکه کلاس‌های پیاده‌ساز فعلی دچار خطا شوند.
 public interface ILogger
 {
     void Log(string message);
@@ -171,7 +172,6 @@ public interface ILogger
     // متد جدید با پیاده‌سازی پیش‌فرض
     void LogError(string error) => Log($"ERROR: {error}");
 }
-```
 
 حالا تمام کلاس‌هایی که `ILogger` را پیاده‌سازی کرده‌اند، بدون تغییر کار می‌کنند و متد `LogError` را به‌صورت پیش‌فرض دارند.
 
