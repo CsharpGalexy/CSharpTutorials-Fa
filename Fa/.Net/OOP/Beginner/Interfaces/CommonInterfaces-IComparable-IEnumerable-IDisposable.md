@@ -149,7 +149,6 @@ public class FileManager : IDisposable
             if (disposing)
             {
                 // آزاد کردن منابع مدیریت‌شده
-                _fileStream?.Close();
                 _fileStream?.Dispose();
             }
             // آزاد کردن منابع غیرمدیریت‌شده (در اینجا نیازی نیست)
