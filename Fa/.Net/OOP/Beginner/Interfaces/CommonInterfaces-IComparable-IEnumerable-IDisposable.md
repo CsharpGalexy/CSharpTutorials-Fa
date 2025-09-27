@@ -3,8 +3,8 @@
 
 1. [مقدمه‌ای بر Interface در C#](#مقدمه‌ای-بر-interface-در-c)
 2. [چرا از Interface استفاده می‌کنیم؟](#چرا-از-interface-استفاده-می‌کنیم)
-3. [IComparable<T> – مقایسه‌ی اشیاء](#icomparablet--مقایسه‌ی-اشیاء)
-4. [IEnumerable<T> – پیمایش مجموعه‌ها](#ienumerablet--پیمایش-مجموعه‌ها)
+3. [IComparable<T> – مقایسه‌ی اشیاء](#icomparable--مقایسه%E2%80%8Cی-اشیاء)
+4. [IEnumerable<T> – پیمایش مجموعه‌ها](#ienumerable--پیمایش-مجموعه%E2%80%8Cها)
 5. [IDisposable – مدیریت منابع غیرمدیریت‌شده](#idisposable--مدیریت-منابع-غیرمدیریت‌شده)
 6. [جمع‌بندی و بهترین روش‌ها (Best Practices)](#جمع‌بندی-و-بهترین-روش‌ها-best-practices)
 7. [منابع معتبر](#منابع-معتبر)
