@@ -63,3 +63,51 @@ class Program
 - اگر امکان ارث‌بری از چند کلاس وجود داشت، احتمال داشت کلاس فرزند با متدهای هم‌نام یا پیاده‌سازی‌های متناقض روبه‌رو شود.  
 
 ---
+## جایگزین ارث‌بری چندگانه: استفاده از اینترفیس‌ها
+در C# به‌جای ارث‌بری از چندین کلاس، می‌توان از **اینترفیس‌ها (Interfaces)** استفاده کرد.  
+
+اینترفیس‌ها اجازه می‌دهند یک کلاس چندین قرارداد رفتاری را پیاده‌سازی کند، بدون اینکه مشکلات ارث‌بری چندگانه ایجاد شود.  
+
+**هدف:** شبیه‌سازی رفتارهای پرواز و شنا برای یک کلاس.  
+
+```csharp
+public interface IFlyable
+{
+    void Fly();
+}
+
+public interface ISwimmable
+{
+    void Swim();
+}
+
+public class Duck : IFlyable, ISwimmable
+{
+    public void Fly()
+    {
+        Console.WriteLine("Duck is flying.");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("Duck is swimming.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Duck duck = new Duck();
+        duck.Fly();  
+        duck.Swim(); 
+    }
+}
+```
+
+**تحلیل کد:**  
+- `Duck` دو اینترفیس `IFlyable` و `ISwimmable` را پیاده‌سازی کرده است.  
+- هر اینترفیس فقط تعریف قرارداد (امضای متد) را دارد و `Duck` مسئول پیاده‌سازی آن‌ها است.  
+- این روش، رفتار چندگانه را بدون تداخل فراهم می‌کند.  
+
+---
