@@ -1,8 +1,8 @@
 ## فهرست مطالب
 
 1. [مقدمه](#مقدمه)
-2. [تعریف Marker Interface چیست؟](#تعریف-marker-interface-چیست؟)
-3. [چرا از Marker Interface استفاده می‌کنیم؟](#چرا-از-marker-interface-استفاده-می‌کنیم؟)
+2. [تعریف Marker Interface چیست؟](#تعریف-marker-interface-چیست)
+3. [چرا از Marker Interface استفاده می‌کنیم؟](#چرا-از-marker-interface-استفاده-می‌کنیم)
 4. [مثال‌های کاربردی در C#](#مثال‌های-کاربردی-در-c)
    - [ISerializable](#iserializable)
    - [IComparable و ICloneable (نکته مهم)](#icomparable-و-icloneable-نکته-مهم)
