@@ -56,3 +56,29 @@ public class Person
 این روش ساده است و در پروژه‌های کوچک یا کلاس‌های مستقل بسیار کاربردی می‌باشد.
 
 ---
+## روش دوم: استفاده از Data Annotations
+در پروژه‌های ASP.NET Core یا EF Core می‌توان از **Attributes** برای اعتبارسنجی استفاده کرد.
+
+### نمونه کد:
+```csharp
+using System.ComponentModel.DataAnnotations;
+
+public class Product
+{
+    [Required(ErrorMessage = "Name is required.")]
+    [StringLength(50, ErrorMessage = "Name cannot be longer than 50 characters.")]
+    public string Name { get; set; }
+
+    [Range(1, 1000, ErrorMessage = "Price must be between 1 and 1000.")]
+    public decimal Price { get; set; }
+}
+```
+
+### توضیح:
+- `[Required]` می‌گوید فیلد نمی‌تواند خالی باشد.  
+- `[StringLength]` طول رشته را محدود می‌کند.  
+- `[Range]` محدوده مجاز برای قیمت تعیین می‌کند.  
+
+این ویژگی‌ها در ASP.NET Core به‌صورت خودکار هنگام ارسال فرم‌ها اجرا می‌شوند و پیام‌های خطا به کاربر نمایش داده می‌شوند.
+
+---
