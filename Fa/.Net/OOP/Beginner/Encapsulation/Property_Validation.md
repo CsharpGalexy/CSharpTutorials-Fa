@@ -82,3 +82,80 @@ public class Product
 این ویژگی‌ها در ASP.NET Core به‌صورت خودکار هنگام ارسال فرم‌ها اجرا می‌شوند و پیام‌های خطا به کاربر نمایش داده می‌شوند.
 
 ---
+
+## اجرای دستی اعتبارسنجی با کلاس Validator
+گاهی لازم است اعتبارسنجی را به صورت دستی و خارج از ASP.NET اجرا کنیم.  
+
+### نمونه کد:
+```csharp
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main()
+    {
+        var product = new Product { Name = "", Price = 1500 };
+
+        var context = new ValidationContext(product);
+        var results = new List<ValidationResult>();
+
+        bool isValid = Validator.TryValidateObject(product, context, results, true);
+
+        if (!isValid)
+        {
+            foreach (var result in results)
+            {
+                Console.WriteLine(result.ErrorMessage);
+            }
+        }
+    }
+}
+```
+
+### توضیح:
+- `ValidationContext` زمینه اعتبارسنجی را مشخص می‌کند.  
+- `Validator.TryValidateObject` خصوصیات شیء را بررسی می‌کند.  
+- اگر خطایی وجود داشته باشد، پیام‌ها چاپ می‌شوند.  
+
+این روش برای **کنسول اپلیکیشن‌ها، سرویس‌ها یا تست‌های واحد** مفید است.
+
+---
+
+## ملاحظات و محدودیت‌های Data Annotations
+- بیشتر برای پروژه‌های **ASP.NET Core و EF Core** مناسب هستند.  
+- برای قوانین پیچیده یا شرطی کافی نیستند.  
+- برای سناریوهای پیچیده‌تر می‌توان از کتابخانه‌هایی مانند **FluentValidation** استفاده کرد.  
+
+---
+
+## الگوهای مدرن در C# برای Validation
+از C# 9 به بعد می‌توان از **init-only properties** یا **Recordها** استفاده کرد.  
+
+### نمونه کد:
+```csharp
+public class Person
+{
+    public string Name { get; init; }
+    public int Age { get; init; }
+
+    public Person(string name, int age)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ArgumentException("Name is required.", nameof(name));
+        if (age < 0 || age > 120)
+            throw new ArgumentOutOfRangeException(nameof(age), "Invalid age.");
+
+        Name = name;
+        Age = age;
+    }
+}
+```
+
+### توضیح:
+- مقدار خصوصیات فقط در **سازنده** تعیین می‌شود.  
+- پس از ساخته شدن شیء دیگر قابل تغییر نیستند.  
+- مناسب برای معماری‌های مدرن مثل **DDD** یا **CQRS** هستند.  
+
+---
