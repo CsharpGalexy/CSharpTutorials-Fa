@@ -51,7 +51,7 @@ public class Person
 ### توضیح:
 - فیلد `age` خصوصی است و فقط از طریق خصوصیت `Age` مقداردهی می‌شود.  
 - در `setter` بررسی می‌کنیم مقدار داخل بازه مجاز باشد.  
-- در صورت نامعتبر بودن، استثنا پرتاب می‌کنیم.  
+- در صورت نامعتبر بودن،  خطا میدهد.  
 
 این روش ساده است و در پروژه‌های کوچک یا کلاس‌های مستقل بسیار کاربردی می‌باشد.
 
@@ -159,3 +159,22 @@ public class Person
 - مناسب برای معماری‌های مدرن مثل **DDD** یا **CQRS** هستند.  
 
 ---
+## خلاصه و نتیجه‌گیری
+اعتبارسنجی خصوصیات یک بخش حیاتی در ساخت نرم‌افزار است.  
+- برای کلاس‌های ساده: استفاده از Setter یا سازنده.  
+- برای پروژه‌های ASP.NET Core: استفاده از Data Annotation.  
+- برای کنترل بیشتر: اجرای دستی با `Validator`.  
+- برای پروژه‌های پیچیده: استفاده از ابزارهایی مثل FluentValidation.  
+
+اگر تازه‌کار هستید، **Data Annotation** نقطه شروع بسیار خوبی است.  
+
+---
+
+## منابع معتبر
+- [Data Annotations in .NET (Microsoft Docs)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations)  
+- [Validation in ASP.NET Core (Microsoft Docs)](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation)  
+- [ArgumentOutOfRangeException Class (Microsoft Docs)](https://learn.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception)  
+- [init keyword (C# reference - Microsoft Docs)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init)  
+- [Validator Class (Microsoft Docs)](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.validator)  
+- [FluentValidation (Official Site)](https://docs.fluentvalidation.net/en/latest/)  
+
