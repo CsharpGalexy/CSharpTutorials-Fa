@@ -156,3 +156,47 @@ C# با ممنوع کردن ارث‌بری چندگانه، از بروز چن�
    این اجباری بودن انتخاب، عملاً مانع از بروز مشکل الماس می‌شود.  
 
 ---
+## الگوهای جایگزین: ترکیب (Composition) به جای ارث‌بری
+الگوی **ترکیب** (Composition) یکی از بهترین راه‌ها برای پرهیز از پیچیدگی ارث‌بری است.  
+
+به‌جای اینکه بگوییم یک کلاس «است» (is-a) کلاس دیگر، می‌گوییم «دارد» (has-a).  
+
+**هدف:** ترکیب رفتار پرواز و شنا در کلاس Duck.  
+
+```csharp
+public class FlyBehavior
+{
+    public void Fly() => Console.WriteLine("Flying with wings.");
+}
+
+public class SwimBehavior
+{
+    public void Swim() => Console.WriteLine("Swimming in water.");
+}
+
+public class Duck
+{
+    private readonly FlyBehavior _fly = new FlyBehavior();
+    private readonly SwimBehavior _swim = new SwimBehavior();
+
+    public void PerformFly() => _fly.Fly();
+    public void PerformSwim() => _swim.Swim();
+}
+
+class Program
+{
+    static void Main()
+    {
+        Duck duck = new Duck();
+        duck.PerformFly();
+        duck.PerformSwim();
+    }
+}
+```
+
+**تحلیل کد:**  
+- کلاس `Duck` نه از چند کلاس ارث‌بری کرده و نه از اینترفیس استفاده کرده است.  
+- بلکه با *ترکیب* دو کلاس `FlyBehavior` و `SwimBehavior` رفتارهای مورد نیاز را کسب کرده است.  
+- این روش انعطاف‌پذیری بالایی دارد و تغییر یا جایگزینی رفتارها در آینده ساده‌تر خواهد بود.  
+
+---
