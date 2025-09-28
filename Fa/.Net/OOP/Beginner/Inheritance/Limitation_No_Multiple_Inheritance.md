@@ -200,3 +200,17 @@ class Program
 - این روش انعطاف‌پذیری بالایی دارد و تغییر یا جایگزینی رفتارها در آینده ساده‌تر خواهد بود.  
 
 ---
+## خلاصه و نتیجه‌گیری
+- C# برای ساده‌سازی و جلوگیری از مشکلاتی مثل **مشکل الماس**، ارث‌بری چندگانه را پشتیبانی نمی‌کند.  
+- به جای آن، اینترفیس‌ها و ترکیب (Composition) به عنوان راه‌حل‌های اصلی معرفی شده‌اند.  
+- هرچند اینترفیس‌ها محدودیت‌هایی دارند، اما با طراحی درست می‌توان کدی قابل نگهداری، تمیز و مقیاس‌پذیر نوشت.  
+- ترکیب در بسیاری از موارد انتخابی بهتر از ارث‌بری است و انعطاف‌پذیری بیشتری ارائه می‌دهد.  
+
+---
+
+## منابع معتبر
+- [Microsoft Learn: Inheritance in C#](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)  
+- [Microsoft Learn: Interfaces](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)  
+- [Microsoft Learn: Default Interface Methods (C# 8.0+)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods)  
+- [Microsoft Learn: Composition over Inheritance](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff921345(v=pandp.10))  
+- [C# Language Specification – Inheritance](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/classes#inheritance)  
