@@ -181,4 +181,18 @@ Method Overriding قدرتمند است، اما محدودیت‌هایی دا�
 > - در **Overloading** چند متد با نام یکسان ولی امضاهای متفاوت در یک کلاس تعریف می‌شوند و انتخاب متد در **زمان کامپایل** انجام می‌شود (Compile-time Polymorphism).  
 > - در مقابل، **Overriding** به کلاس‌های مشتق‌شده اجازه می‌دهد پیاده‌سازی متدهای مجازی کلاس پایه را تغییر دهند و انتخاب متد در **زمان اجرا** انجام می‌شود (Runtime Polymorphism).  
 
+---## خلاصه و نتیجه‌گیری
+Method Overriding در C# مکانیزمی کلیدی برای پیاده‌سازی چندشکلی است که به کلاس‌های مشتق‌شده اجازه می‌دهد رفتار متدهای ارث‌بری‌شده را تغییر دهند. با استفاده از `virtual` در کلاس پایه، `override` در کلاس مشتق‌شده، و `sealed override` برای نهایی کردن پیاده‌سازی، می‌توانید سلسله مراتب ارث‌برداری را به طور دقیق کنترل کنید.  
+
+این ویژگی سیستم‌های انعطاف‌پذیر می‌سازد، اما باید با محدودیت‌هایی مانند نیاز به امضای یکسان و عدم امکان override متدهای غیرمجازی، مدیریت شود.  
+همچنین، Overriding را با Overloading اشتباه نگیرید؛ هرکدام کاربرد خاص خود را دارند.  
+
 ---
+
+## منابع معتبر
+- [Microsoft Learn: virtual keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)  
+- [Microsoft Learn: override keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override)  
+- [Microsoft Learn: sealed keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/sealed)  
+- [Microsoft Learn: Knowing when to use override and new keywords](https://learn.microsoft.com/en-us/dotnet/csharp/methods)  
+- [Microsoft Learn: Polymorphism](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism)  
+- [GeeksforGeeks: Method Overriding in C#](https://www.geeksforgeeks.org/c-sharp-method-overriding/)  
