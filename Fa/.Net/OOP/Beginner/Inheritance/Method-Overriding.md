@@ -74,3 +74,54 @@ class Program
 متد `Speak` در کلاس `Animal` با `virtual` تعریف شده، بنابراین کلاس `Dog` می‌تواند آن را با `override` تغییر دهد. وقتی شیء `Dog` از طریق اشاره‌گر `Animal` فراخوانی می‌شود، سیستم نوع واقعی شیء را بررسی کرده و پیاده‌سازی `Dog` را اجرا می‌کند – این هسته چندشکلی است. در مقابل، متد `Eat` غیر virtual، است، پس همیشه نسخه کلاس پایه اجرا می‌شود، حتی اگر شیء مشتق‌شده باشد.
 
 ---
+## مثال ۲: جلوگیری از بازنویسی بیشتر با sealed override
+این مثال نشان می‌دهد چگونه از `sealed override` برای مسدود کردن تغییرات بیشتر در سلسله مراتب ارث‌برداری استفاده کنیم.  
+**مسئله‌ای که حل می‌کند:** حفاظت از پیاده‌سازی خاص در برابر تغییرات ناخواسته در کلاس‌های پایین‌تر، که می‌تواند ثبات سیستم را حفظ کند.
+
+```csharp
+using System;
+
+public class Animal
+{
+    public virtual void Speak()
+    {
+        Console.WriteLine("Animal makes a sound.");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+public class Puppy : Dog
+{
+    public sealed override void Speak()
+    {
+        Console.WriteLine("Puppy softly barks.");
+    }
+}
+
+public class BabyPuppy : Puppy
+{
+    // خطای کامپایل: نمی‌توان Speak را override کرد زیرا sealed است
+    // public override void Speak() { Console.WriteLine("Baby puppy whimpers."); }
+}
+
+class Program
+{
+    static void Main()
+    {
+        BabyPuppy baby = new BabyPuppy();
+        baby.Speak(); // خروجی: Puppy softly barks.
+    }
+}
+```
+
+### تحلیل کد
+کلاس `Puppy` متد `Speak` را با `sealed override` بازنویسی می‌کند، که پیاده‌سازی آن را نهایی می‌نماید. این کار تضمین می‌کند که رفتار `Speak` در تمام کلاس‌های مشتق‌شده از `Puppy` تغییرناپذیر بماند. اگر سعی کنید در `BabyPuppy` این متد را override کنید، کامپایلر خطای **CS0239** تولید می‌کند.
+
+---
