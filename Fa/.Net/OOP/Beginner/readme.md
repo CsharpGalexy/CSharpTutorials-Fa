@@ -73,6 +73,7 @@
 
 ### 7. وراثت (Inheritance)
 - Base/Derived, `base` Keyword  
+- [Method Overriding - virtual, override, sealed override](./Inheritance/Method-Overriding.md)
 - Method Overriding (`virtual`, `override`, `sealed override`)  
 - Constructor Chaining  
 - Multi-level & Hierarchical Inheritance
