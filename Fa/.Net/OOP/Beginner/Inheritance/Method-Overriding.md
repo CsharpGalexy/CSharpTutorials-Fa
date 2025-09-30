@@ -125,3 +125,45 @@ class Program
 کلاس `Puppy` متد `Speak` را با `sealed override` بازنویسی می‌کند، که پیاده‌سازی آن را نهایی می‌نماید. این کار تضمین می‌کند که رفتار `Speak` در تمام کلاس‌های مشتق‌شده از `Puppy` تغییرناپذیر بماند. اگر سعی کنید در `BabyPuppy` این متد را override کنید، کامپایلر خطای **CS0239** تولید می‌کند.
 
 ---
+
+## تفاوت override با new (مخفی‌سازی متد)
+گاهی اوقات ممکن است بخواهید یک متد غیرمجازی را در کلاس مشتق‌شده با همان نام تعریف کنید. در این حالت، C# از مکانیزم مخفی‌سازی (method hiding) با کلیدواژه `new` استفاده می‌کند، نه بازنویسی.
+
+```csharp
+using System;
+
+public class BaseClass
+{
+    public void Show()
+    {
+        Console.WriteLine("BaseClass Show");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void Show()
+    {
+        Console.WriteLine("DerivedClass Show");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        BaseClass baseObj = new DerivedClass();
+        baseObj.Show(); // خروجی: BaseClass Show (بر اساس نوع اشاره‌گر)
+
+        DerivedClass derivedObj = new DerivedClass();
+        derivedObj.Show(); // خروجی: DerivedClass Show
+    }
+}
+```
+
+### تحلیل کد
+با `override`، رفتار بر اساس نوع واقعی شیء در زمان اجرا تعیین می‌شود (چندشکلی).  
+اما با `new`، رفتار بر اساس نوع اشاره‌گر در زمان کامپایل مشخص می‌گردد. بنابراین، وقتی از اشاره‌گر `BaseClass` استفاده می‌کنید، نسخه پایه فراخوانی می‌شود.  
+`new` برای مخفی کردن متدهای غیرمجازی مفید است، اما جایگزین `override` نیست و چندشکلی واقعی ایجاد نمی‌کند.
+
+---
