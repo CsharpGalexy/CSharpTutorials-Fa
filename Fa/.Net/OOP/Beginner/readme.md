@@ -73,11 +73,11 @@
 
 ### 7. وراثت (Inheritance)
 - Base/Derived, `base` Keyword  
-- Method Overriding (`virtual`, `override`, `sealed override`)  
+- [Method Overriding - virtual, override, sealed override](./Inheritance/Method-Overriding.md)
 - Constructor Chaining  
 - Multi-level & Hierarchical Inheritance
 - [Limitation: No Multiple Inheritance](./Inheritance/Limitation_No_Multiple_Inheritance.md)
-- Limitation: No Multiple Inheritance  
+
 
 ### 8. چندریختی (Polymorphism)
 - Compile-time: Method/Operator/Constructor Overloading  
