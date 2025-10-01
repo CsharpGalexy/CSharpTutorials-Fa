@@ -140,3 +140,102 @@ public class Bird : IMovable
 - می‌توان یک لیست از `IMovable` داشت و بدون دانستن نوع دقیق، `Move` را فراخوانی کرد — این همان پلی‌مورفیسم بر اساس واسط است.
 
 ---
+
+## نمونه کد: ترکیب abstract class و interface با تمرکز بر Validation
+**مسئله:** سیستمی داریم که موجودیت‌های داده‌ای (entities) حالت مشترک دارند و نیاز است که اعتبارسنجی (validation) را به صورت اجباری پیاده‌سازی کنند.
+
+**کد:**
+```csharp
+public abstract class DataEntity
+{
+    public string Name { get; set; }
+
+    protected DataEntity(string name)
+    {
+        Name = name;
+    }
+
+    // روش ذخیره‌سازی (سرنام: Save) را هر موجودیت خودش پیاده‌سازی می‌کند
+    public abstract void Save();
+}
+
+public interface IValidatable
+{
+    bool Validate();
+
+    // متد پیش‌فرض برای لاگ کردن خطا
+    void LogValidationError(string error) => Console.WriteLine($"خطا: {error}");
+}
+
+public class User : DataEntity, IValidatable
+{
+    public string Email { get; set; }
+
+    public User(string name, string email) : base(name)
+    {
+        Email = email;
+    }
+
+    public override void Save() => Console.WriteLine($"کاربر {Name} ذخیره شد.");
+
+    public bool Validate()
+    {
+        if (string.IsNullOrEmpty(Email))
+        {
+            LogValidationError("ایمیل خالی است.");
+            return false;
+        }
+        return true;
+    }
+}
+```
+
+**تحلیل:**  
+- `DataEntity` منطق و حالت پایه را فراهم می‌کند.  
+- `IValidatable` قرارداد اعتبارسنجی را تحمیل می‌کند (و یک متد کمکی پیش‌فرض برای لاگ دارد).  
+- کلاس `User` ترکیبی از هر دو است — این الگو رایج و قدرتمند است زیرا هم حالت پایه را می‌گیرد و هم قابلیت‌های مستقل را اضافه می‌کند.
+
+---
+
+## ترکیب abstract class و interface در طراحی واقعی
+**مسئله واقعی:** مدل‌سازی حیوانات؛ همه حیوانات قادر به تولید صدا هستند اما تنها برخی قابلیت پرواز دارند.
+
+**کد:**
+```csharp
+public abstract class Animal
+{
+    public string Name { get; set; }
+
+    public Animal(string name) => Name = name;
+
+    public abstract void MakeSound();
+}
+
+public interface IFlyable
+{
+    void Fly();
+}
+
+public class Dog : Animal
+{
+    public Dog(string name) : base(name) { }
+
+    public override void MakeSound() => Console.WriteLine($"{Name} گفت: ووف!");
+}
+
+public class Sparrow : Animal, IFlyable
+{
+    public Sparrow(string name) : base(name) { }
+
+    public override void MakeSound() => Console.WriteLine($"{Name} چیروک کرد!");
+
+    public void Fly() => Console.WriteLine($"{Name} در حال پرواز است!");
+}
+```
+
+**تحلیل:**  
+- `Animal` پوشش خانواده حیوانات را می‌دهد.  
+- `IFlyable` قابلیت اختیاری است که فقط برای برخی انواع نیاز است.  
+- این طراحی خوانا، گسترش‌پذیر و قابل نگهداری است.
+
+---
