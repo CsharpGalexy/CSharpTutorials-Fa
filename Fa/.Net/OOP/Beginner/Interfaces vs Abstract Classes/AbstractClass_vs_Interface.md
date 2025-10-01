@@ -364,3 +364,20 @@ public interface IExample
 همان‌طور که در بخش قبل نشان داده شد، تعارض metdهای default می‌تواند نیازمند حل‌وفصل صریح در کلاس پیاده‌کننده باشد.
 
 ---
+
+## خلاصه و نتیجه‌گیری
+- **Abstract class** مناسب برای زمانی است که نیاز به اشتراک state و منطق بین انواع مرتبط دارید.  
+- **Interface** مناسب برای تعریف قابلیت‌های مستقل و ترکیب چندگانهٔ رفتارهاست.  
+- استفادهٔ **هوشمندانه و ترکیبی** از هر دو معمولاً بهترین نتیجه را در طراحی سیستم‌های قابل نگهداری و قابل گسترش می‌دهد.  
+- همواره قبل از افزودن اعضای جدید به پایه (abstract class یا interface) توجه کنید که آیا تغییر باعث ایجاد breaking change برای پیاده‌سازی‌های فعلی می‌شود یا خیر.
+
+---
+
+## منابع معتبر
+- [Abstractions (Abstract Types and Interfaces) - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/abstraction)
+- [Interfaces - define behavior for multiple types - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)
+- [abstract keyword - C# reference - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
+- [Default interface methods - C# feature specifications - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods)
+- [Static abstract members in interfaces - C# 11](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11#static-abstract-members-in-interfaces)
+
+---
