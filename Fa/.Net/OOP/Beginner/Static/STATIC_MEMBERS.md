@@ -100,7 +100,7 @@ Console.WriteLine(AppConfig.AppName); // خروجی: NewApp
 ### مثال:
 
 ```csharp
-public class MathHelper
+public static class MathHelper
 {
     public static int Add(int a, int b)
     {
