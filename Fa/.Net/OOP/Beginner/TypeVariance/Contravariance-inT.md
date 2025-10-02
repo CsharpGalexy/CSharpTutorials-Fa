@@ -1,175 +1,176 @@
 ﻿
+
 ## فهرست مطالب
 
-1. [مقدمه: Type Variance چیست؟](#مقدمه-type-variance-چیست)
-2. [Covariance چیست؟](#covariance-چیست)
-3. [چرا Covariance مهم است؟](#چرا-covariance-مهم-است)
-4. [نحوه استفاده از `out T` در C#](#نحوه-استفاده-از-out-t-در-c)
-5. [مثال‌های کاربردی](#مثالهای-کاربردی)
-6. [محدودیت‌های Covariance](#محدودیتهای-covariance)
-7. [تفاوت Covariance با Contravariance](#تفاوت-covariance-با-contravariance)
+1. [مقدمه: Variance چیست؟](#مقدمه-variance-چیست)
+2. [Contravariance چیست؟](#contravariance-چیست)
+3. [تفاوت Contravariance با Covariance و Invariance](#تفاوت-contravariance-با-covariance-و-invariance)
+4. [نحوه استفاده از Contravariance در C#](#نحوه-استفاده-از-contravariance-در-c)
+5. [مثال‌های عملی در C#](#مثالهای-عملی-در-c)
+6. [محدودیت‌ها و نکات مهم](#محدودیتها-و-نکات-مهم)
+7. [کاربردهای رایج Contravariance](#کاربردهای-رایج-contravariance)
 8. [جمع‌بندی](#جمعبندی)
 9. [منابع معتبر](#منابع-معتبر)
 
 ---
 
-## مقدمه: Type Variance چیست؟
+## مقدمه: Variance چیست؟
 
-در برنامه‌نویسی شیء‌گرا (OOP)، **Type Variance** (واریانس نوع) به رفتار یک ساختار عمومی (Generic) نسبت به روابط سلسله مراتبی انواع (Inheritance) اشاره دارد. به عبارت ساده‌تر، وقتی یک کلاس یا رابط عمومی داریم مثل `IEnumerable<T>`، می‌خواهیم بدانیم آیا می‌توانیم به جای `T` از یک زیرنوع یا ابرنوع آن استفاده کنیم یا خیر.
+**Variance** (واریانس نوع) در برنامه‌نویسی به رفتار یک سازهٔ عمومی (generic) نسبت به روابط زیرمجموعه‌بودن (subtyping) بین انواع ورودی یا خروجی آن اشاره دارد. در C#، variance فقط برای **انواع رابط (interface)** و **دِلِگیت‌ها (delegate)** قابل اعمال است و در کلاس‌های عمومی (generic classes) پشتیبانی نمی‌شود.
 
-در C#، سه نوع واریانس وجود دارد:
-
+سه نوع variance وجود دارد:
 - **Covariance** (`out T`)
 - **Contravariance** (`in T`)
 - **Invariance** (بدون کلمه کلیدی)
 
-در این مقاله فقط به **Covariance** می‌پردازیم.
+در این مستند، فقط به **Contravariance** می‌پردازیم.
 
 ---
 
-## Covariance چیست؟
+## Contravariance چیست؟
 
-**Covariance** اجازه می‌دهد که یک ساختار عمومی (مثل رابط یا دیلگیت) با یک **زیرنوع** (Subtype) جایگزین شود. به عبارت دیگر، اگر `Cat` زیرنوع `Animal` باشد، آنگاه `IEnumerable<Cat>` را بتوان به عنوان `IEnumerable<Animal>` استفاده کرد.
+**Contravariance** اجازه می‌دهد که یک نوع عمومی با یک **نوع پایه‌تر** (base type) جایگزین نوع مشخص‌شده در تعریف شود، **اما فقط برای ورودی‌ها** (مثلاً پارامترهای متد).
 
-در C#، برای فعال‌سازی Covariance در رابط‌ها و دیلگیت‌ها، از کلمه کلیدی **`out`** قبل از پارامتر نوع استفاده می‌شود:
+در C#، برای فعال‌سازی contravariance از کلمه کلیدی `in` در تعریف رابط یا دِلِگیت استفاده می‌شود.
+
+> 🔑 **نکته کلیدی**: Contravariance جهت رابطهٔ زیرمجموعه‌بودن را **معکوس** می‌کند.
+
+به عبارت دیگر:
+اگر `Dog` زیرمجموعهٔ `Animal` باشد (`Dog : Animal`)، آنگاه:
+- یک `Action<Animal>` می‌تواند جایگزین `Action<Dog>` شود (چون `Action<T>` contravariant است).
+
+---
+
+## تفاوت Contravariance با Covariance و Invariance
+
+| نوع Variance      | کلمه کلیدی | جهت رابطه | کاربرد |
+|------------------|------------|------------|--------|
+| **Covariance**   | `out T`    | همان جهت (`Dog → Animal`) | برای **خروجی** (مثلاً بازگشتی متد) |
+| **Contravariance** | `in T`     | معکوس (`Animal → Dog`) | برای **ورودی** (مثلاً پارامتر متد) |
+| **Invariance**   | بدون کلمه کلیدی | بدون تغییر | هم ورودی و هم خروجی |
+
+---
+
+## نحوه استفاده از Contravariance در C#
+
+در C#، برای تعریف یک رابط یا دِلِگیت contravariant، از کلمه کلیدی `in` قبل از پارامتر نوع عمومی استفاده می‌کنیم.
+
+### سینتکس:
 
 ```csharp
-interface IProducer<out T>
+interface IContravariant<in T>
 {
-    T Produce();
+    void DoSomething(T item);
 }
 ```
 
-کلمه کلیدی `out` نشان می‌دهد که `T` فقط در **خروجی** (مثلاً مقدار بازگشتی متد) استفاده می‌شود و هرگز در ورودی (مثل پارامتر متد) نیست.
-
----
-
-## چرا Covariance مهم است؟
-
-بدون Covariance، کد زیر **کامپایل نمی‌شود**:
+یا برای دِلِگیت:
 
 ```csharp
-IEnumerable<string> strings = new List<string>();
-IEnumerable<object> objects = strings; // ❌ بدون Covariance خطای کامپایل می‌دهد
+delegate void MyDelegate<in T>(T item);
 ```
 
-اما با وجود Covariance در `IEnumerable<out T>`، این کد **کاملاً معتبر** است، چون `string` زیرنوع `object` است و `IEnumerable<T>` به صورت **Covariant** تعریف شده است.
-
-این ویژگی:
-- انعطاف‌پذیری کد را افزایش می‌دهد.
-- از نیاز به تبدیل دستی (casting) جلوگیری می‌کند.
-- امنیت نوع (Type Safety) را حفظ می‌کند.
+### شرایط استفاده:
+- `T` فقط باید در **موقعیت ورودی** (پارامتر متد) استفاده شود.
+- نباید در بازگشتی متد یا به عنوان فیلد یا خاصیت استفاده شود.
 
 ---
 
-## نحوه استفاده از `out T` در C#
+## مثال‌های عملی در C#
 
-### شرایط استفاده از `out`:
+### مثال ۱: استفاده از `IComparer<in T>`
 
-1. فقط در **رابط‌ها** (`interface`) و **دیلگیت‌ها** (`delegate`) قابل استفاده است.
-2. پارامتر نوع (`T`) **نباید** در موقعیت‌های **ورودی** (مثل پارامتر متد یا فیلد) استفاده شود.
-3. فقط در **موقعیت‌های خروجی** (مثل مقدار بازگشتی متد یا پراپرتی فقط خواندنی) مجاز است.
-
-### مثال معتبر:
+یکی از معروف‌ترین مثال‌های contravariance در کتابخانه‌های استاندارد .NET، رابط `IComparer<in T>` است:
 
 ```csharp
-public interface ICovariant<out T>
+public interface IComparer<in T>
 {
-    T GetValue(); // ✅ فقط خروجی
-    // void SetValue(T value); // ❌ این خط باعث خطا می‌شود
+    int Compare(T x, T y);
 }
 ```
 
-### مثال نامعتبر:
+فرض کنید دو کلاس داریم:
 
 ```csharp
-public interface IInvalid<out T>
+class Animal { public string Name { get; set; } }
+class Dog : Animal { }
+```
+
+حالا یک مقایس‌کننده برای `Animal` می‌سازیم:
+
+```csharp
+public class AnimalComparer : IComparer<Animal>
 {
-    void SetValue(T value); // ❌ خطای کامپایل: T در موقعیت ورودی استفاده شده
+    public int Compare(Animal x, Animal y) => 
+        string.Compare(x.Name, y.Name);
 }
 ```
 
----
-
-## مثال‌های کاربردی
-
-### مثال ۱: استفاده از `IEnumerable<out T>`
+با contravariance می‌توانیم این مقایس‌کننده را برای لیستی از `Dog` استفاده کنیم:
 
 ```csharp
-class Animal { public virtual void Speak() => Console.WriteLine("..."); }
-class Dog : Animal { public override void Speak() => Console.WriteLine("Woof!"); }
-
-var dogs = new List<Dog> { new Dog(), new Dog() };
-IEnumerable<Animal> animals = dogs; // ✅ ممکن است چون IEnumerable<out T> است
-
-foreach (var animal in animals)
-    animal.Speak();
+List<Dog> dogs = new() { new Dog { Name = "Rex" }, new Dog { Name = "Buddy" } };
+dogs.Sort(new AnimalComparer()); // ✅ مجاز است!
 ```
 
-### مثال ۲: ساخت رابط Covariant سفارشی
+چون `IComparer<Animal>` می‌تواند جایگزین `IComparer<Dog>` شود.
+
+---
+
+### مثال ۲: دِلِگیت `Action<in T>`
+
+دِلِگیت `Action<T>` در C# contravariant است:
 
 ```csharp
-public interface IFactory<out T>
-{
-    T Create();
-}
+Action<Animal> feedAnimal = a => Console.WriteLine($"Feeding {a.Name}");
+Action<Dog> feedDog = feedAnimal; // ✅ مجاز است!
 
-public class DogFactory : IFactory<Dog>
-{
-    public Dog Create() => new Dog();
-}
-
-// استفاده:
-IFactory<Dog> dogFactory = new DogFactory();
-IFactory<Animal> animalFactory = dogFactory; // ✅ مجاز است
+feedDog(new Dog { Name = "Max" }); // خروجی: Feeding Max
 ```
 
----
-
-## محدودیت‌های Covariance
-
-- **کلاس‌ها (class)** نمی‌توانند Covariant باشند. فقط **رابط‌ها** و **دیلگیت‌ها**.
-- پارامتر نوع با `out` **نباید** در موقعیت‌های ورودی (مثل پارامتر متد یا فیلد) استفاده شود.
-- Covariance فقط برای **انواع مرجع** (Reference Types) کار می‌کند، نه انواع مقداری (Value Types) مگر اینکه با boxing تبدیل شوند.
+این کار ممکن است چون `Action<Animal>` می‌تواند هر شیء از نوع `Animal` (و زیرمجموعه‌های آن مثل `Dog`) را بپذیرد.
 
 ---
 
-## تفاوت Covariance با Contravariance
+## محدودیت‌ها و نکات مهم
 
-| ویژگی | Covariance (`out T`) | Contravariance (`in T`) |
-|--------|----------------------|--------------------------|
-| جهت تبدیل | زیرنوع → ابرنوع | ابرنوع → زیرنوع |
-| مثال | `IEnumerable<Cat>` → `IEnumerable<Animal>` | `Action<Animal>` → `Action<Cat>` |
-| موقعیت استفاده | فقط خروجی | فقط ورودی |
-| کلمه کلیدی | `out` | `in` |
+1. **فقط برای رابط و دِلِگیت**: Contravariance در C# فقط برای `interface` و `delegate` پشتیبانی می‌شود، نه برای کلاس‌های عمومی.
+2. **فقط برای ورودی**: نوع `in T` نباید در موقعیت خروجی (مثل بازگشتی متد یا خاصیت get) استفاده شود.
+3. **Reference Types فقط**: Variance فقط برای انواع مرجع (reference types) کار می‌کند، نه انواع مقداری (value types) مثل `int` یا `struct`.
+4. **نامناسب برای mutable state**: اگر رابط شامل متدهایی باشد که حالت شیء را تغییر می‌دهند، contravariance ممکن است منجر به مشکلات ایمنی نوع شود.
 
-> 💡 نکته: `Action<T>` در C# به صورت `Action<in T>` تعریف شده است (Contravariant).
+---
+
+## کاربردهای رایج Contravariance
+
+- **مقایسه‌کننده‌ها**: مانند `IComparer<in T>` یا `IEqualityComparer<in T>`
+- **اکشن‌ها و هندلرها**: مانند `Action<in T>`, `EventHandler<in TEventArgs>`
+- **فریم‌ورک‌های event-driven**: برای پذیرش هندلرهای عمومی‌تر برای رویدادهای خاص‌تر
+- **الگوهای طراحی**: مانند Visitor یا Strategy که نیاز به انعطاف‌پذیری در ورودی دارند
 
 ---
 
 ## جمع‌بندی
 
-- **Covariance** با کلمه کلیدی `out` در C# پیاده‌سازی می‌شود.
-- فقط در **رابط‌ها** و **دیلگیت‌ها** قابل استفاده است.
-- اجازه می‌دهد یک ساختار عمومی با زیرنوع جایگزین شود (مثلاً `IEnumerable<Cat>` به جای `IEnumerable<Animal>`).
-- برای حفظ **Type Safety**، پارامتر نوع فقط می‌تواند در موقعیت‌های **خروجی** استفاده شود.
-- این ویژگی کد را انعطاف‌پذیر‌تر و خوانا‌تر می‌کند.
+Contravariance در C# یک ویژگی قدرتمند برای افزایش انعطاف‌پذیری کد است. با استفاده از کلمه کلیدی `in`، می‌توانیم رابط‌ها و دِلِگیت‌هایی تعریف کنیم که اجازه می‌دهند نوع پایه‌تر به جای نوع مشتق‌شده استفاده شود — اما فقط در موقعیت‌های **ورودی**. این ویژگی به کد شما اجازه می‌دهد کمتر تکرارشونده، عمومی‌تر و قابل استفاده‌تر باشد، بدون از دست دادن ایمنی نوع (type safety).
 
 ---
 
 ## منابع معتبر
 
-1. **Microsoft Docs – Covariance and Contravariance**  
-   [https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/covariance-contravariance/](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/covariance-contravariance/)
+1. **مستندات رسمی Microsoft**  
+   [Variance in Generic Interfaces (C#)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces)  
+   [Contravariance for Generic Type Parameters](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-generic-modifier)
 
-2. **C# Language Specification – Variance in Generic Interfaces**  
-   [https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/interfaces#variance](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/interfaces#variance)
+2. **C# Language Specification (ECMA-334)**  
+   [ECMA-334 C# Language Specification – Section on Variance](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/)
 
-3. **Eric Lippert’s Blog (Former C# Team Member) – Covariance and Contravariance FAQ**  
-   [https://ericlippert.com/2009/11/30/whats-the-difference-between-covariance-and-assignment-compatibility/](https://ericlippert.com/2009/11/30/whats-the-difference-between-covariance-and-assignment-compatibility/)
+3. **Jon Skeet – C# in Depth**  
+   فصل 13: Variance in delegates and interfaces  
+   ISBN: 978-1617294430
 
-4. **C# in Depth – Jon Skeet (Chapter on Variance)**  
-   ISBN: 978-1617294938 – فصل 13: Variance in generic types
+4. **Stack Overflow – Official Explanation**  
+   [What is the difference between covariance and contravariance?](https://stackoverflow.com/questions/2662369/covariance-and-contravariance-real-world-example)
 
-5. **Stack Overflow – When to use `out` keyword in C# generics?**  
-   [https://stackoverflow.com/questions/273336/what-is-the-out-keyword-in-c-sharp](https://stackoverflow.com/questions/273336/what-is-the-out-keyword-in-c-sharp)
+5. **Pluralsight Course**  
+   *C# Generics and Collections* by Scott Allen – بخش Variance
