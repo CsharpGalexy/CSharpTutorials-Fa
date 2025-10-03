@@ -2,13 +2,13 @@
 
 ## فهرست مطالب
 
-1. [مقدمه‌ای بر Type Variance](#مقدمهای-بر-type-variance)
+1. [مقدمه‌ای بر Type Variance](#مقدمه%E2%80%8Cای-بر-type-variance)
 2. [سه نوع واریانس در C#](#سه-نوع-واریانس-در-c)
 3. [Invariance چیست؟](#invariance-چیست)
 4. [چرا Invariance مهم است؟](#چرا-invariance-مهم-است)
-5. [مثال‌های کاربردی Invariance در C#](#مثالهای-کاربردی-invariance-در-c)
+5. [مثال‌های کاربردی Invariance در C#](#مثال%E2%80%8Cهای-کاربردی-invariance-در-c)
 6. [تفاوت Invariance با Covariance و Contravariance](#تفاوت-invariance-با-covariance-و-contravariance)
-7. [جمع‌بندی](#جمعبندی)
+7. [جمع‌بندی](#جمع%E2%80%8Cبندی)
 8. [منابع معتبر](#منابع-معتبر)
 
 ---
