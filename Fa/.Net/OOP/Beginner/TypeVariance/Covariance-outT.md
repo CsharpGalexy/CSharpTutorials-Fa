@@ -5,7 +5,7 @@
 2. [Covariance چیست؟](#covariance-چیست)
 3. [چرا Covariance مهم است؟](#چرا-covariance-مهم-است)
 4. [نحوه استفاده از `out T` در C#](#نحوه-استفاده-از-out-t-در-c)
-5. [مثال‌های کاربردی](##مثال%E2%80%8Cهای-کاربردی)
+5. [مثال‌های کاربردی](#مثال%E2%80%8Cهای-کاربردی)
 6. [محدودیت‌های Covariance](#محدودیت%E2%80%8Cهای-covariance)
 7. [تفاوت Covariance با Contravariance](#تفاوت-covariance-با-contravariance)
 8. [جمع‌بندی](#جمع%E2%80%8Cبندی)
