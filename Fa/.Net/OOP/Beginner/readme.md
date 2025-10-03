@@ -99,7 +99,7 @@
 - Interface Inheritance  
 
 ### 11. تفاوت‌های کلیدی
-- Abstract Class vs Interface  
+- [Abstract Class vs Interface ](./Abstract_Class_vs_Interface/AbstractClass_vs_Interface.md)
 - Abstraction vs Encapsulation vs Information Hiding  
 - When to Use Which?  
 
