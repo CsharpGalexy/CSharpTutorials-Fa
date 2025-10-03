@@ -178,7 +178,7 @@ public static class Constants
 ```csharp
 public static class UnsafeLogger
 {
-    private static List<string> _logs = new List<string>(); // List Thread-Safe نیست!
+    private static readonly List<string> _logs = new List<string>(); // List Thread-Safe نیست!
 
     public static void Log(string message)
     {
