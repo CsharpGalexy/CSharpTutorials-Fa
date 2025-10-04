@@ -178,3 +178,51 @@ public class UserService
 ```
 
 ------------------------------------------------------------------------
+
+## تفاوت‌های کلیدی در یک نگاه
+
+  --------------------------------------------------------------------------------------------
+  مفهوم               تمرکز اصلی       ابزارهای پیاده‌سازی در C#            مثال
+  ------------------- ---------------- ----------------------------------- -------------------
+  **Abstraction**     ساده‌سازی تعامل   interface، abstract class           IPaymentProcessor
+                      خارجی (What)                                         
+
+  **Encapsulation**   بسته‌بندی داده و  private فیلدها، public متدها        BankAccount
+                      عملیات (How to                                       
+                      organize)                                            
+
+  **Information       کاهش وابستگی     internal، interface                 SHA256Hasher
+  Hiding**            (How to protect)                                     
+  --------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## محدودیت‌ها و نکات هشداردهنده
+
+-   **Abstraction** بیش از حد = پیچیدگی در سلسله‌مراتب کلاس‌ها\
+-   **Encapsulation** نادرست = سختی در Debugging\
+-   **Information Hiding** = دشواری در Unit Test
+
+------------------------------------------------------------------------
+
+## جمع‌بندی و نتیجه‌گیری
+
+این سه اصل مکمل یکدیگر هستند و کمک می‌کنند نرم‌افزارهایی تمیز، ایزوله و
+مقاوم در برابر تغییرات بسازیم.
+
+------------------------------------------------------------------------
+
+## منابع معتبر
+
+-   [Microsoft Learn -- Object-Oriented
+    Programming](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/)
+-   [Oracle Java Tutorials -- What Is an
+    Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html)
+-   [Parnas, D. L. (1972). On the Criteria To Be Used in Decomposing
+    Systems into Modules](https://dl.acm.org/doi/10.1145/361598.361623)
+-   [Martin Fowler --
+    Encapsulation](https://martinfowler.com/bliki/Encapsulation.html)
+-   [Stack Overflow -- Difference between Abstraction and
+    Encapsulation](https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
+-   [GeeksforGeeks -- Difference between Abstraction and
+    Encapsulation](https://www.geeksforgeeks.org/difference-between-abstraction-and-encapsulation-in-java-with-examples/)
