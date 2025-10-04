@@ -51,3 +51,130 @@
     کنند تأکید دارد تا وابستگی بین ماژول‌ها کاهش یابد.
 
 ------------------------------------------------------------------------
+
+## 1. Abstraction (انتزاع)
+
+### تعریف دقیق
+
+**Abstraction** به معنای پنهان کردن جزئیات پیاده‌سازی پیچیده و ارائه تنها
+ویژگی‌ها و رفتارهای ضروری به کاربر خارجی است. این اصل اجازه می‌دهد تا
+کاربران با سیستم تعامل کنند بدون اینکه نیاز به درک مکانیسم‌های داخلی
+داشته باشند.
+
+> "Abstraction is the concept of exposing only the required essential
+> characteristics and behavior of an object, hiding the unnecessary
+> details."\
+> --- Microsoft Learn: Object-Oriented Programming Concepts.
+
+### چه مسئله‌ای را حل می‌کند؟
+
+مشکل پیچیدگی سیستم‌های بزرگ. مثلا در سیستم پرداخت، کاربر نباید نگران
+رمزنگاری یا ارتباط با بانک باشد.
+
+### مثال عملی در C
+
+``` csharp
+public interface IPaymentProcessor
+{
+    bool ProcessPayment(decimal amount);
+}
+
+public class BankPaymentProcessor : IPaymentProcessor
+{
+    public bool ProcessPayment(decimal amount)
+    {
+        // جزئیات پیچیده: ارتباط با API بانک، رمزنگاری، ثبت لاگ...
+        Console.WriteLine("Connecting to bank API...");
+        Console.WriteLine("Encrypting data...");
+        return true;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IPaymentProcessor processor = new BankPaymentProcessor();
+        bool success = processor.ProcessPayment(100m);
+        Console.WriteLine(success ? "✅ Payment succeeded!" : "❌ Failed!");
+    }
+}
+```
+
+------------------------------------------------------------------------
+
+## 2. Encapsulation (کپسوله‌سازی)
+
+### تعریف دقیق
+
+**Encapsulation** به معنای بسته‌بندی داده‌ها و متدهای مرتبط در یک کلاس و
+کنترل دسترسی با **private** و **public** است.
+
+> "Encapsulation is the technique of making the fields in a class
+> private and providing access to them via public methods."\
+> --- Oracle Java Tutorials: What Is an Object?
+
+### مثال عملی در C
+
+``` csharp
+public class BankAccount
+{
+    private decimal _balance;
+    public decimal Balance => _balance;
+
+    public void Deposit(decimal amount)
+    {
+        if (amount <= 0)
+            throw new ArgumentException("Amount must be positive.");
+        _balance += amount;
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= 0 || amount > _balance)
+            throw new InvalidOperationException("Invalid withdrawal.");
+        _balance -= amount;
+    }
+}
+```
+
+------------------------------------------------------------------------
+
+## 3. Information Hiding (مخفی‌سازی اطلاعات)
+
+### تعریف دقیق
+
+**Information Hiding** یعنی جزئیات پیاده‌سازی یک ماژول از سایر بخش‌ها
+پنهان بماند تا تغییرات داخلی باعث وابستگی زیاد نشود.
+
+> "Information hiding is the principle that design decisions likely to
+> change should be hidden from other modules."\
+> --- David Parnas, 1972
+
+### مثال عملی در C
+
+``` csharp
+public interface IHasher
+{
+    string Hash(string input);
+}
+
+internal class SHA256Hasher : IHasher
+{
+    public string Hash(string input)
+    {
+        using var sha256 = System.Security.Cryptography.SHA256.Create();
+        var bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(input));
+        return Convert.ToBase64String(bytes);
+    }
+}
+
+public class UserService
+{
+    private readonly IHasher _hasher;
+    public UserService(IHasher hasher) => _hasher = hasher;
+    public string Register(string password) => _hasher.Hash(password);
+}
+```
+
+------------------------------------------------------------------------
