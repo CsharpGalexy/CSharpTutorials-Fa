@@ -4,7 +4,7 @@
 
 1. [مقدمه](#مقدمه)  
 2. [Extension Methods چیست؟](#extension-methods-چیست)  
-3. [چرا Extension Methods به صورت Static تعریف می‌شوند؟](#چرا-extension-methods-به-صورت-static-تعریف-میشوند)  
+3. [چرا Extension Methods به صورت Static تعریف می‌شوند؟](#چرا-extension-methods-به-صورت-static-تعریف-می%E2%80%8Cشوند)  
 4. [چگونه یک Static Method را به Instance Method تبدیل کنیم؟](#چگونه-یک-static-method-را-به-instance-method-تبدیل-کنیم)  
 5. [نکات مهم و محدودیت‌ها](#نکات-مهم-و-محدودیت‌ها)  
 6. [مثال‌های کاربردی](#مثال‌های-کاربردی)  
