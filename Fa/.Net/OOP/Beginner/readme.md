@@ -100,7 +100,7 @@
 
 ### 11. تفاوت‌های کلیدی
 - [Abstract Class vs Interface ](./Abstract_Class_vs_Interface/AbstractClass_vs_Interface.md)
-- Abstraction vs Encapsulation vs Information Hiding  
+- [Abstraction vs Encapsulation vs Information Hiding](./Abstract_Class_vs_Interface/Abstraction_vs_Encapsulation_vs_Information_Hiding.md)
 - When to Use Which?  
 
 ### 12. کلاس‌های استاتیک (Static Classes)
