@@ -10,7 +10,7 @@
 3. [Lambda Expressions چیست؟](#3-lambda-expressions-چیست)
    - [تعریف](#تعریف-1)
    - [نحوه نوشتن](#نحوه-نوشتن)
-   - [مثال‌های کاربردی](#مثالهای-کاربردی)
+   - [مثال‌های کاربردی](#مثال-۱-lambda-ساده)
 4. [تفاوت Anonymous Methods و Lambda Expressions](#4-تفاوت-anonymous-methods-و-lambda-expressions)
 5. [استفاده در برنامه‌نویسی شیءگرا (OOP)](#5-استفاده-در-برنامه%E2%80%8Cنویسی-شیءگرا-oop)
 6. [بهترین شیوه‌ها (Best Practices)](#6-بهترین-شیوه%E2%80%8Cها-best-practices)
