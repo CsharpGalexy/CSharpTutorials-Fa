@@ -8,9 +8,9 @@
 5. [Indexer با انواع داده‌ی غیر عددی (مثلاً string)](#5-indexer-با-انواع-دادهی-غیر-عددی-مثلا-string)
 6. [Indexer چندپارامتری (Multi-parameter Indexer)](#6-indexer-چندپارامتری-multi-parameter-indexer)
 7. [تفاوت Indexer با متد عادی](#7-%D8%AA%D9%81%D8%A7%D9%88%D8%AA-indexer-%D8%A8%D8%A7-%D9%85%D8%AA%D8%AF-%D8%B9%D8%A7%D8%AF%DB%8C)
-8. [بهترین شیوه‌های استفاده از Indexer (Best Practices)](#8-بهترین-شیوههای-استفاده-از-indexer-best-practices)
-9. [محدودیت‌ها و نکات مهم](#9-محدودیتها-و-نکات-مهم)
-10. [جمع‌بندی](#10-جمعبندی)
+8. [بهترین شیوه‌های استفاده از Indexer (Best Practices)](#8-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B4%DB%8C%D9%88%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-indexer-best-practices)
+9. [محدودیت‌ها و نکات مهم](#9-%D9%85%D8%AD%D8%AF%D9%88%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%87%D8%A7-%D9%88-%D9%86%DA%A9%D8%A7%D8%AA-%D9%85%D9%87%D9%85)
+10. [جمع‌بندی](#10-%D8%AC%D9%85%D8%B9%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C)
 11. [منابع معتبر](#11-منابع-معتبر)
 
 ---
