@@ -157,4 +157,31 @@ public class Program
 
 ------------------------------------------------------------------------
 
+## جمع‌بندی
+
+Overriding و Hiding هر دو برای تغییر رفتار متدهای ارث‌برده‌شده استفاده
+می‌شوند، اما:
+
+-   Overriding رفتار را **در زمان اجرا** تعیین می‌کند و پلی‌مورفیسم را
+    ممکن می‌سازد.
+-   Hiding رفتار را **در زمان کامپایل** تعیین می‌کند و به نوع ارجاع
+    وابسته است.
+
+------------------------------------------------------------------------
+
+## منابع معتبر
+
+-   [Microsoft Learn -- override (C#
+    Reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/override)
+-   [Microsoft Learn -- new Modifier (C#
+    Reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-modifier)
+-   [Microsoft Learn -- Polymorphism in
+    C#](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism)
+-   [C# Language Specification
+    (ECMA-334)](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/)
+-   Jon Skeet -- *C# in Depth*, Chapter on Inheritance and Polymorphism
+-   Stack Overflow: [Difference between method overriding and method
+    hiding in
+    C#](https://stackoverflow.com/questions/588745/difference-between-method-overriding-and-method-hiding-in-c-sharp)
+
 
