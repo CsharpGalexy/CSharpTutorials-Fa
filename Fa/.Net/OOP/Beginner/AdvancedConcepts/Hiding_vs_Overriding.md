@@ -61,3 +61,100 @@ Hiding یا **پنهان‌سازی متد** زمانی رخ می‌دهد که 
 ## تفاوت‌های کلیدی: رفتار در زمان اجرا و زمان کامپایل
 
   -----------------------------------------------------------------------
+    ویژگی                     Overriding          Hiding
+  ------------------------- ------------------- -------------------------
+  نیاز به `virtual` در کلاس بله                 خیر
+  پایه                                          
+
+  کلیدواژه در کلاس فرزند    `override`          `new` (توصیه می‌شود)
+
+  زمان تصمیم‌گیری            در زمان اجرا        در زمان کامپایل
+                            (Runtime)           (Compile-time)
+
+  وابسته به نوع ارجاع؟      خیر                 بله
+
+  پشتیبانی از پلی‌مورفیسم    بله                 خیر
+  -----------------------------------------------------------------------
+
+Overriding برای رفتارهای پویا و runtime طراحی شده، در حالی‌که Hiding
+بیشتر تصمیمی در سطح compile-time است.
+
+------------------------------------------------------------------------
+
+## مثال عملی: Overriding در C
+
+``` csharp
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic animal sound");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+public class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Meow!");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Animal myPet = new Dog();
+        myPet.MakeSound(); // خروجی: Woof!
+
+        Animal myOtherPet = new Cat();
+        myOtherPet.MakeSound(); // خروجی: Meow!
+    }
+}
+```
+
+------------------------------------------------------------------------
+
+## مثال عملی: Hiding در C
+
+``` csharp
+public class Vehicle
+{
+    public void Start()
+    {
+        Console.WriteLine("Vehicle engine started.");
+    }
+}
+
+public class ElectricCar : Vehicle
+{
+    public new void Start()
+    {
+        Console.WriteLine("Electric motor started silently.");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Vehicle myCar = new ElectricCar();
+        myCar.Start(); // خروجی: Vehicle engine started.
+
+        ElectricCar realCar = new ElectricCar();
+        realCar.Start(); // خروجی: Electric motor started silently.
+    }
+}
+```
+
+------------------------------------------------------------------------
+
+
