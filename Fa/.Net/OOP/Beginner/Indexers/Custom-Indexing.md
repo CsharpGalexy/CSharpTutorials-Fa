@@ -7,7 +7,7 @@
 4. [مثال ساده: Indexer در یک کلاس شخصی‌سازی‌شده](#4-مثال-ساده-indexer-در-یک-کلاس-شخصیسازیشده)
 5. [Indexer با انواع داده‌ی غیر عددی (مثلاً string)](#5-indexer-با-انواع-دادهی-غیر-عددی-مثلا-string)
 6. [Indexer چندپارامتری (Multi-parameter Indexer)](#6-indexer-چندپارامتری-multi-parameter-indexer)
-7. [تفاوت Indexer با متد عادی](#7-تفاوت-indexer-با-متد-عادی)
+7. [تفاوت Indexer با متد عادی](#7-%D8%AA%D9%81%D8%A7%D9%88%D8%AA-indexer-%D8%A8%D8%A7-%D9%85%D8%AA%D8%AF-%D8%B9%D8%A7%D8%AF%DB%8C)
 8. [بهترین شیوه‌های استفاده از Indexer (Best Practices)](#8-بهترین-شیوههای-استفاده-از-indexer-best-practices)
 9. [محدودیت‌ها و نکات مهم](#9-محدودیتها-و-نکات-مهم)
 10. [جمع‌بندی](#10-جمعبندی)
