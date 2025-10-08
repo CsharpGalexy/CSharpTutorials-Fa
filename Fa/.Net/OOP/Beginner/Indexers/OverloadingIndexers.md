@@ -5,12 +5,12 @@
 2. [چرا از Indexer استفاده می‌کنیم؟](#چرا-از-indexer-استفاده-می‌کنیم)
 3. [ساختار پایه Indexer در C#](#ساختار-پایه-indexer-در-c)
 4. [Overloading Indexers چیست؟](#overloading-indexers-چیست)
-5. [مثال‌های کاربردی Overloading Indexers](#مثالهای-کاربردی-overloading-indexers)
+5. [مثال‌های کاربردی Overloading Indexers](#%D9%85%D8%AB%D8%A7%D9%84%E2%80%8C%D9%87%D8%A7%DB%8C-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C-overloading-indexers)
    - [مثال ۱: Indexer با نوع int و string](#مثال-۱-indexer-با-نوع-int-و-string)
    - [مثال ۲: Indexer با چند پارامتر](#مثال-۲-indexer-با-چند-پارامتر)
-6. [ملاحظات و بهترین روش‌ها (Best Practices)](#ملاحظات-و-بهترین-روشها-best-practices)
+6. [ملاحظات و بهترین روش‌ها (Best Practices)](#%D9%85%D9%84%D8%A7%D8%AD%D8%B8%D8%A7%D8%AA-%D9%88-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D9%88%D8%B4%E2%80%8C%D9%87%D8%A7-best-practices)
 7. [تفاوت Indexer با Property](#تفاوت-indexer-با-property)
-8. [جمع‌بندی](#جمعبندی)
+8. [جمع‌بندی](#%D8%AC%D9%85%D8%B9%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C)
 9. [منابع معتبر](#منابع-معتبر)
 
 ---
