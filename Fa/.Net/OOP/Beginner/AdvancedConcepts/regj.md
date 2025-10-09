@@ -81,3 +81,66 @@ obj.ShowMessage(); // خروجی: Hello from Base Class
 فعال نمی‌کند.
 
 ------------------------------------------------------------------------
+
+### 3. استفاده در Generic Constraints
+
+در تعریف جنریک‌ها، از `new()` می‌توان برای اطمینان از وجود سازنده‌ی بدون
+پارامتر در نوع داده‌شده استفاده کرد.
+
+مثال:
+
+``` csharp
+public class Factory<T> where T : new()
+{
+    public T CreateInstance()
+    {
+        return new T();
+    }
+}
+```
+
+اینجا `where T : new()` تضمین می‌کند که نوع `T` حتماً دارای سازنده‌ی
+پیش‌فرض است تا بتوانیم نمونه‌ای از آن بسازیم.
+
+------------------------------------------------------------------------
+
+## تفاوت `new` و `override`
+
+کلیدواژه‌های `new` و `override` هر دو در کلاس‌های فرزند برای کنترل رفتار
+اعضای ارث‌برده‌شده استفاده می‌شوند، اما عملکرد آن‌ها تفاوت اساسی دارد.
+
+-   `new`: فقط **پنهان‌سازی (hiding)** انجام می‌دهد و چندریختی را فعال
+    نمی‌کند.\
+-   `override`: برای **بازنویسی (overriding)** متد مجازی (`virtual` یا
+    `abstract`) استفاده می‌شود و چندریختی واقعی را فعال می‌کند.
+
+### مثال مقایسه‌ای:
+
+``` csharp
+class Base
+{
+    public virtual void Display() => Console.WriteLine("Base");
+}
+
+class Derived1 : Base
+{
+    public new void Display() => Console.WriteLine("Derived - new");
+}
+
+class Derived2 : Base
+{
+    public override void Display() => Console.WriteLine("Derived - override");
+}
+```
+
+اکنون دو رفتار متفاوت خواهیم داشت:
+
+``` csharp
+Base obj1 = new Derived1();
+obj1.Display(); // Base (به خاطر new)
+
+Base obj2 = new Derived2();
+obj2.Display(); // Derived - override (به خاطر polymorphism)
+```
+
+------------------------------------------------------------------------
