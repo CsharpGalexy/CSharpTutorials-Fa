@@ -114,7 +114,8 @@
 - Thread Safety  
 
 ### 14. مخفی‌سازی متدها (Method Hiding)
-- `new` Keyword  
+- `new` Keyword
+- [`new` Keyword](./AdvancedConcepts/new_keyword.md)
 - [Hiding vs Overriding ](./AdvancedConcepts/Hiding_vs_Overriding.md)
 
 
