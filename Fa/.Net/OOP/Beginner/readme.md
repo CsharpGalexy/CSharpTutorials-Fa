@@ -115,7 +115,9 @@
 
 ### 14. مخفی‌سازی متدها (Method Hiding)
 - `new` Keyword  
-- Hiding vs Overriding  
+- [Hiding vs Overriding ](./AdvancedConcepts/Hiding_vs_Overriding.md)
+
+
 
 ### 15. چندوجهی نوع (Type Variance)
 - Covariance (`out T`)  
