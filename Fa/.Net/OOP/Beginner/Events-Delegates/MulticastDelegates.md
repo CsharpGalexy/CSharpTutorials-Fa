@@ -6,7 +6,7 @@
 2. [Delegate چیست؟](#delegate-چیست)  
 3. [تفاوت Delegate ساده و Multicast Delegate](#تفاوت-delegate-ساده-و-multicast-delegate)  
 4. [چگونه یک Multicast Delegate ایجاد کنیم؟](#چگونه-یک-multicast-delegate-ایجاد-کنیم)  
-5. [نحوه اضافه و حذف متد‌ها به Multicast Delegate](#نحوه-اضافه-و-حذف-متدها-به-multicast-delegate)  
+5. [نحوه اضافه و حذف متد‌ها به Multicast Delegate](#%D9%86%D8%AD%D9%88%D9%87-%D8%A7%D8%B6%D8%A7%D9%81%D9%87-%D9%88-%D8%AD%D8%B0%D9%81-%D9%85%D8%AA%D8%AF%E2%80%8C%D9%87%D8%A7-%D8%A8%D9%87-multicast-delegate)  
 6. [نکات مهم در مورد بازگشتی (Return Type) و پارامترها](#نکات-مهم-در-مورد-بازگشتی-return-type-و-پارامترها)  
 7. [استفاده از Multicast Delegate در Events](#استفاده-از-multicast-delegate-در-events)  
 8. [مثال کاربردی: سیستم اعلان (Notification System)](#مثال-کاربردی-سیستم-اعلان-notification-system)  
