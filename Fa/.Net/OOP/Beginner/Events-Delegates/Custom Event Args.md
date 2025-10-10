@@ -3,13 +3,13 @@
 ## فهرست مطالب
 
 1. [مقدمه](#مقدمه)
-2. [Delegate چیست؟](#delegate-چیست؟)
-3. [Event چیست؟](#event-چیست؟)
+2. [Delegate چیست؟](#delegate-%DA%86%DB%8C%D8%B3%D8%AA)
+3. [Event چیست؟](#event-%DA%86%DB%8C%D8%B3%D8%AA)
 4. [EventArgs و Custom EventArgs](#eventargs-و-custom-eventargs)
 5. [الگوی طراحی Event در C# (Event Design Pattern)](#الگوی-طراحی-event-در-c-event-design-pattern)
 6. [مثال کاربردی: ساخت یک کلاس با Event و Custom EventArgs](#مثال-کاربردی-ساخت-یک-کلاس-با-event-و-custom-eventargs)
-7. [نکات بهینه‌سازی و بهترین روش‌ها (Best Practices)](#نکات-بهینهسازی-و-بهترین-روشها-best-practices)
-8. [جمع‌بندی](#جمعبندی)
+7. [نکات بهینه‌سازی و بهترین روش‌ها (Best Practices)](#%D9%86%DA%A9%D8%A7%D8%AA-%D8%A8%D9%87%DB%8C%D9%86%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C-%D9%88-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D9%88%D8%B4%E2%80%8C%D9%87%D8%A7-best-practices)
+8. [جمع‌بندی](#%D8%AC%D9%85%D8%B9%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C)
 9. [منابع معتبر](#منابع-معتبر)
 
 ---
