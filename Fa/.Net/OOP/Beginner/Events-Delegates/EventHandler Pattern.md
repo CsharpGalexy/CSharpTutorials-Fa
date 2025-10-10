@@ -4,7 +4,7 @@
 1. [مقدمه‌ای بر رویدادها (Events) و نمایندگان (Delegates)](#%D9%85%D9%82%D8%AF%D9%85%D9%87%E2%80%8C%D8%A7%DB%8C-%D8%A8%D8%B1-%D8%B1%D9%88%DB%8C%D8%AF%D8%A7%D8%AF%D9%87%D8%A7-events-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%D8%A7%D9%86-delegates)
 2. [چرا از الگوی EventHandler استفاده می‌کنیم؟](#%DA%86%D8%B1%D8%A7-%D8%A7%D8%B2-%D8%A7%D9%84%DA%AF%D9%88%DB%8C-eventhandler-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D9%85%DB%8C%E2%80%8C%DA%A9%D9%86%DB%8C%D9%85)
 3. [ساختار استاندارد الگوی EventHandler](#ساختار-استاندارد-الگوی-eventhandler)
-4. [پیاده‌سازی ساده با EventHandler\<TEventArgs>](#پیادهسازی-ساده-با-eventhandlerteventargs)
+4. [پیاده‌سازی ساده با EventHandler\<TEventArgs>](#%D9%BE%DB%8C%D8%A7%D8%AF%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C-%D8%B3%D8%A7%D8%AF%D9%87-%D8%A8%D8%A7-eventhandlerteventargs)
 5. [ایجاد رویدادهای سفارشی با EventArgs سفارشی](#ایجاد-رویدادهای-سفارشی-با-eventargs-سفارشی)
 6. [تفاوت‌های مهم: delegate vs event vs EventHandler](#تفاوت‌های-مهم-delegate-vs-event-vs-eventhandler)
 7. [نکات امنیتی و بهترین روش‌ها (Best Practices)](#نکات-امنیتی-و-بهترین-روش‌ها-best-practices)
