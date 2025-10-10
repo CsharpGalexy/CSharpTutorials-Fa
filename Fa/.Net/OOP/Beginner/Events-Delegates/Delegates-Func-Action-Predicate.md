@@ -3,7 +3,7 @@
 ## فهرست مطالب
 
 1. [مقدمه‌ای بر Delegates](#1-مقدمه‌ای-بر-delegates)  
-2. [چرا از Delegate استفاده می‌کنیم؟](#2-چرا-از-delegate-استفاده-میکنیم)  
+2. [چرا از Delegate استفاده می‌کنیم؟](#2-%DA%86%D8%B1%D8%A7-%D8%A7%D8%B2-delegate-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D9%85%DB%8C%E2%80%8C%DA%A9%D9%86%DB%8C%D9%85)  
 3. [انواع Built-in Delegates در C#](#3-انواع-built-in-delegates-در-c)  
    - [3.1 Action](#31-action)  
    - [3.2 Func](#32-func)  
