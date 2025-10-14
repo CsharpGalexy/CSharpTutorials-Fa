@@ -104,8 +104,8 @@
 - When to Use Which?  
 
 ### 12. کلاس‌های استاتیک (Static Classes)
-- Only Static Members  
-- Utility Classes  
+- Only Static Members 
+ - [Utility Classes](./Static/Utility_Classes.md)
 - static Constructors  
 
 ### 13. اعضا و متدهای استاتیک (Static Members)
