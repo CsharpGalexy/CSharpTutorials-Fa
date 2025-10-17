@@ -6,7 +6,7 @@
 2. [کاربرد اول: Serialization با Reflection](#2-کاربرد-اول-serialization-با-reflection)
 3. [کاربرد دوم: Dependency Injection (DI) با Reflection](#3-کاربرد-دوم-dependency-injection-di-با-reflection)
 4. [کاربرد سوم: ORM و Reflection](#4-کاربرد-سوم-orm-و-reflection)
-5. [جمع‌بندی و بهترین روش‌ها (Best Practices)](#5-جمعبندی-و-بهترین-روشها-best-practices)
+5. [جمع‌بندی و بهترین روش‌ها (Best Practices)](#5-%D8%AC%D9%85%D8%B9%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C-%D9%88-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D8%B1%D9%88%D8%B4%E2%80%8C%D9%87%D8%A7-best-practices)
 6. [منابع معتبر](#6-منابع-معتبر)
 
 ---
